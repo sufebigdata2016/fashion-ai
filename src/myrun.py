@@ -80,6 +80,7 @@ def keypoints_gen(pred_y, image_size, need_cols):
     # image_size
     im_with_keypoints = {}
     im_with_position = {}
+    keypoints_ = {}
     for k, col in enumerate(need_cols):
         pred_y_tmp = 255 - cv2.resize(pred_y[0], image_size[::-1])[:, :, k:k + 1]
 
@@ -121,8 +122,9 @@ def keypoints_gen(pred_y, image_size, need_cols):
                                                   cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
         im_with_keypoints[col] = im_with_keypoints_tmp
         im_with_position[col] = positions
+        keypoints_[col] = keypoints
 
-    return {"keypoint_detect": im_with_keypoints, "keypoint_position": im_with_position}
+    return {"keypoint_detect": im_with_keypoints, "keypoint_position": im_with_position, "keypoints_": keypoints_}
 
 
 def compare_default(key_points_data):
@@ -171,14 +173,17 @@ def compare_unique(key_points_data):
 def draw_keypoint(key_points_data, im_origin, save_path):
     im_with_keypoints = key_points_data["keypoint_detect"]
     im_with_position = key_points_data["keypoint_position"]
+    keypoints_ = key_points_data["keypoints_"]
 
     fig = plt.figure(figsize=(20, 20))
     for k, (col, im) in enumerate(im_with_keypoints.items()):
         fig.add_subplot(4, 4, k + 1)
         # im and keypoint dectect in one picture
-        im_plus_keypoint = 255 - im + cv2.cvtColor(im_origin, cv2.COLOR_BGR2RGB)
-        plt.imshow(im_plus_keypoint / np.max(im_plus_keypoint, axis=(0, 1)))
-
+        # im_plus_keypoint = 255 - im + cv2.cvtColor(im_origin, cv2.COLOR_BGR2RGB)
+        # plt.imshow(im_plus_keypoint / np.max(im_plus_keypoint, axis=(0, 1)))
+        tmp = cv2.drawKeypoints(im_origin, keypoints_[col], np.array([]), (0, 0, 0),
+                                cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+        plt.imshow(cv2.cvtColor(tmp, cv2.COLOR_BGR2RGB))
         # a = 255 - im
         # a = cv2.cvtColor(a, cv2.COLOR_RGB2GRAY)
         # b = im_origin.copy()
