@@ -1,0 +1,1 @@
+TASK_KEY_POINTS = 14
