@@ -192,9 +192,9 @@ if __name__ == '__main__':
     sample_valid = tf.placeholder(tf.float32, shape=(12, 640, 640, 3))
     train_img = tf.summary.image('training sample', sample_train, 4)
     valid_img = tf.summary.image('validation sample', sample_valid, 12)
-    valid_loss_t = tf.summary.scalar("loss_valid", valid_loss)
-    valid_loss_ll_t = tf.summary.scalar("loss_valid_lastlayer", valid_loss_ll)
-    merged_validate_op = tf.summary.merge([train_img, valid_img, valid_loss_t, valid_loss_ll_t])
+    # valid_loss_t = tf.summary.scalar("loss_valid", valid_loss)
+    valid_loss_ll_t = tf.summary.scalar("loss_valid_ll_heat", valid_loss_ll_heat)
+    merged_validate_op = tf.summary.merge([train_img, valid_img,  valid_loss_ll_t])  #  valid_loss_t,
 
     saver = tf.train.Saver(max_to_keep=100)
     config = tf.ConfigProto(allow_soft_placement=True, log_device_placement=False)
@@ -322,8 +322,8 @@ if __name__ == '__main__':
 
                 # save summary
                 summary = sess.run(merged_validate_op, feed_dict={
-                    valid_loss: average_loss / total_cnt,
-                    valid_loss_ll: average_loss_ll / total_cnt,
+                    # valid_loss: average_loss / total_cnt,
+                    # valid_loss_ll: average_loss_ll / total_cnt,
                     # valid_loss_ll_paf: average_loss_ll_paf / total_cnt,
                     valid_loss_ll_heat: average_loss_ll_heat / total_cnt,
                     sample_valid: test_results,

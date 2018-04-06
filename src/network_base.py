@@ -259,7 +259,7 @@ class BaseNetwork(object):
                 # ReLU non-linearity
                 output = tf.nn.relu(output, name=scope.name)
             return output
-
+    
     @layer
     def relu(self, input, name):
         return tf.nn.relu(input, name=name)
