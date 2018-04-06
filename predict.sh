@@ -2,8 +2,8 @@
 
 source activate py36_1
 
-MODEL_PATH=/media/yanpan/7D4CF1590195F939/Projects/tf-pose-model/myblouse/tf-pose-2-blouse
-MODEL_NAME=$MODEL_PATH/cmu_batch:32_lr:0.0001_gpus:1_368x368_/model-18000
+MODEL_PATH=/media/yanpan/7D4CF1590195F939/Projects/tf-pose-model/myblouse/tf-pose-3-blouse
+MODEL_NAME=$MODEL_PATH/cmu_batch:32_lr:0.0001_gpus:1_368x368_/model-27000
 
 python ./src/run_checkpoint.py --model=$MODEL_NAME \
                                --pb_path=$MODEL_PATH/graph.pb

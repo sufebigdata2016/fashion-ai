@@ -208,10 +208,10 @@ parser.add_argument('--traindir', type=str, default='[None]', help='train dir')
 HOME_PATH = "/media/yanpan/7D4CF1590195F939"
 # HOME_PATH = "D:"
 args = parser.parse_args(
-    f"--model {HOME_PATH}/Projects/tf-pose-model/myblouse/tf-pose-2-blouse/graph_freeze.pb "
+    f"--model {HOME_PATH}/Projects/tf-pose-model/myblouse/tf-pose-3-blouse/graph_freeze.pb "
     "--resolution 368x368 "
     f"--traindir {HOME_PATH}/Projects/fashionai/mytrain/myblouse "
-    f"--outputdir {HOME_PATH}/Projects/fashionai/pred/tf-pose-2-blouse/blouse "
+    f"--outputdir {HOME_PATH}/Projects/fashionai/pred/tf-pose-3-blouse/blouse "
     f"--testdir {HOME_PATH}/Projects/fashionai/test/Images/blouse".split())
 
 image_paths = [args.testdir + "/" + x for x in os.listdir(args.testdir)]
