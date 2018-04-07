@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 import tensorflow as tf
 import json
-
+import pandas as pd
 import matplotlib.pyplot as plt
 
 logger = logging.getLogger('TfPoseEstimator')
@@ -74,14 +74,43 @@ def graph_pred(graph, test_images, resize):
     return pred_y
 
 
+def im_pad(im):
+    return np.pad(im, [[10, 10], [10, 10], [0, 0]], "maximum")
+
+
+def im_no_pad(im):
+    return im[10:-10, 10:-10, :]
+
+
+# 我再插入一个函数吧，九宫格找keypoint的？这样可以吗, 要pt在边缘 就减不了5啊。还要pad一下？
+def pixel_prob_calc(im, keypoints):
+    # input: im 3-D, list of cv2.keypoints
+    # output: single cv2.keypoints
+    if len(keypoints) == 1:
+        return keypoints
+
+    biggest = 0
+    single_keypoint = []
+    for i in keypoints:
+        tmp_im = np.pad(cv2.cvtColor(im, cv2.COLOR_RGB2GRAY), [[5, 5], [5, 5]], 'symmetric')
+        SUM = np.sum(tmp_im[int(i.pt[0] + 5) - 5:int(i.pt[0] + 5) + 5,
+                     int(i.pt[1] + 5) - 5: int(i.pt[1] + 5) + 5])  # 这输入法有毒啊，圈加起来也行啊我是想九个点，那就圈加起来吧
+        if SUM > biggest:
+            biggest = SUM.copy()
+            single_keypoint = [i]
+    return single_keypoint
+
+
+# 是这样吗？盼神人呢，应该是这样。
+
+
 # TODO: ckpt loader not support
 
 def keypoints_gen(pred_y, image_size, need_cols):
     # image_size
-    im_with_keypoints = {}
-    im_with_position = {}
+    im_pred = {}
     keypoints_ = {}
-    for k, col in enumerate(need_cols):
+    for k, col in enumerate(need_cols):  # col = 'cuff_left_out'
         pred_y_tmp = 255 - cv2.resize(pred_y[0], image_size[::-1])[:, :, k:k + 1]
 
         im = pred_y_tmp.copy()
@@ -112,23 +141,28 @@ def keypoints_gen(pred_y, image_size, need_cols):
         # # Filter by Inertia
         # params.filterByInertia = True
         # params.minInertiaRatio = 0.01
-
+        im_pred[col] = im
         detector = cv2.SimpleBlobDetector_create(params)
+        # 用什么填，最大值，不对，外圈要和背景颜色一眼才行，先试试看
 
-        keypoints = detector.detect(im)
-        positions = [n.pt for n in keypoints]
-
-        im_with_keypoints_tmp = cv2.drawKeypoints(im, keypoints, np.array([]), (0, 0, 255),
-                                                  cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-        im_with_keypoints[col] = im_with_keypoints_tmp
-        im_with_position[col] = positions
+        keypoints = detector.detect(im_pad(im))
         keypoints_[col] = keypoints
 
-    return {"keypoint_detect": im_with_keypoints, "keypoint_position": im_with_position, "keypoints_": keypoints_}
+    return {"pred": im_pred,
+            "keypoints_": keypoints_}
 
 
 def compare_default(key_points_data):
-    return key_points_data["keypoint_position"]
+    # 九宫格找keypoint, keyiba, kanyunle, shishikan
+    # 添加keypoints__
+    # 这个方法好像不太行
+    kd = {}
+    for col, im in key_points_data["pred"].items():
+        keypoints = key_points_data["keypoints_"][col]
+        keypoints_update = pixel_prob_calc(im, keypoints)
+        kd[col] = keypoints_update
+    key_points_data["keypoints__"] = kd
+    return key_points_data
 
 
 def compare_unique(key_points_data):
@@ -158,7 +192,7 @@ def compare_unique(key_points_data):
         else:
             return a, b
 
-    x = key_points_data["keypoint_position"]
+    x = {col: x.pt for col, x in key_points_data["keypoints_"].items()}
 
     x["neckline_left"], x["neckline_right"] = pair_pos(x["neckline_left"], x["neckline_right"])
     x["shoulder_left"], x["shoulder_right"] = pair_pos(x["shoulder_left"], x["shoulder_right"])
@@ -171,19 +205,27 @@ def compare_unique(key_points_data):
 
 
 def draw_keypoint(key_points_data, im_origin, save_path):
-    im_with_keypoints = key_points_data["keypoint_detect"]
-    im_with_position = key_points_data["keypoint_position"]
     keypoints_ = key_points_data["keypoints_"]
+    keypoints__ = key_points_data["keypoints__"]
 
-    fig = plt.figure(figsize=(20, 20))
-    for k, (col, im) in enumerate(im_with_keypoints.items()):
-        fig.add_subplot(4, 4, k + 1)
+    fig = plt.figure(figsize=(40, 20))
+    for k, (col, kps) in enumerate(key_points_data["keypoints_"].items()):
+        fig.add_subplot(4, 8, k * 2 + 1)
+        tmp = cv2.drawKeypoints(im_pad(im_origin), keypoints_[col], np.array([]), (0, 0, 0),
+                                cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+        plt.imshow(cv2.cvtColor(im_no_pad(tmp), cv2.COLOR_BGR2RGB))
+        plt.title(col + " %s" % len(keypoints_[col]))
+
+        fig.add_subplot(4, 8, k * 2 + 2)
+        tmp = cv2.drawKeypoints(im_pad(im_origin), keypoints__[col], np.array([]), (255, 0, 0),
+                                cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
+        plt.imshow(cv2.cvtColor(im_no_pad(tmp), cv2.COLOR_BGR2RGB))
+        plt.title(col + " update %s" % len(keypoints__[col]))
+
         # im and keypoint dectect in one picture
         # im_plus_keypoint = 255 - im + cv2.cvtColor(im_origin, cv2.COLOR_BGR2RGB)
         # plt.imshow(im_plus_keypoint / np.max(im_plus_keypoint, axis=(0, 1)))
-        tmp = cv2.drawKeypoints(im_origin, keypoints_[col], np.array([]), (0, 0, 0),
-                                cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-        plt.imshow(cv2.cvtColor(tmp, cv2.COLOR_BGR2RGB))
+
         # a = 255 - im
         # a = cv2.cvtColor(a, cv2.COLOR_RGB2GRAY)
         # b = im_origin.copy()
@@ -193,7 +235,6 @@ def draw_keypoint(key_points_data, im_origin, save_path):
         # b[:, :, 2] = b[:, :, 2] * 0.3
         # im_plus_keypoint = b
         # plt.imshow(cv2.cvtColor(im_plus_keypoint, cv2.COLOR_BGR2RGB))
-        plt.title(col + " %s" % len(im_with_position[col]))
     fig.savefig(save_path)
     plt.close()
     return save_path
@@ -220,6 +261,7 @@ image_sizes = [test_image.shape[:2] for test_image in images]
 with open(args.traindir + "/annotations/need_cols.txt", "r", encoding="utf8") as f:
     need_cols = [x.strip() for x in f.readlines()]
 
+
 if __name__ == '__test__':
     w, h = model_wh(args.resolution)
     graph = load_graph(args.model)
@@ -236,15 +278,18 @@ if __name__ == '__main__':
     # pred_images_dict is a list of dicts, every dict contains
     outcome = []
     for k, pred_image in enumerate(pred_images):
-
         pred_image_im = keypoints_gen(pred_image, image_sizes[k], need_cols[2:])
         # compare_unique: generate pred_image_keypoint_position, single per keypoint
         # pred_image_keypoint_position = compare_unique(pred_image_im)
-        pred_image_keypoint_position = compare_default(pred_image_im)
+        pred_image_im_update = compare_default(pred_image_im)
 
         # detect if pred_image_keypoint_position has more than 1 points
+        # 没有画预测的图，啥 ，进步i适合i虎i画的吗， 没有现在预测的图，看不到究竟是啥，，，，？？
+        # 就是现在预测只有一个了，及偶没有图了，哦 对啊，那要保存之前的图来对比吧？现在正在覆盖。。
+        # 现在根本就没画，没画？不是在跑吗，我只花了>2点的图。这样啊，那要都画吗，
+        # chifan hao
         count = {}
-        for col, pos in pred_image_keypoint_position.items():
+        for col, pos in pred_image_im_update["keypoints_"].items():
             if len(pos) > 1:
                 count[col] = len(pos)
         if len(count) > 0:
@@ -252,9 +297,10 @@ if __name__ == '__main__':
             #
             # if k % 10000 == 10000 - 1:
             save_path = args.outputdir + "/" + image_paths[k].split("/")[-1]
-            draw_keypoint(pred_image_im, images[k], save_path)
+            draw_keypoint(pred_image_im_update, images[k], save_path)
 
-        outcome_dict_tmp = {"id": image_paths[k], "pos": pred_image_keypoint_position}
+        outcome_dict_tmp = {"id": image_paths[k],
+                            "pos": {col: [i.pt for i in x] for col, x in pred_image_im_update["keypoints__"].items()}}
         outcome.append(outcome_dict_tmp)
 
     with open(args.outputdir + "/pred.json", "w") as f:
@@ -262,9 +308,16 @@ if __name__ == '__main__':
 
 if __name__ == '__tmp__':
     ppp = f"{HOME_PATH}/Projects/fashionai/test/Images/blouse/%s.jpg"
-    ppp = ppp % "0a77868d2697cfa21f400e4cedc972c9"
+    ppp = ppp % "0b73354dad8d031dd3f188886db59f79"
     k = image_paths.index(ppp)
     pred_image = pred_images[k]
 
 # 重叠两个区域，选取覆盖最多的那个像素块：2值化最黑的地方
 # 然后遇到覆盖最多的超过2个，就删除已经被前面找到的那些位置
+
+
+# #预测结果，多个keypoints的channel直接采用pt的九宫格平均
+# if __name__ == '__main__':
+#     a = pd.read_csv("/media/yanpan/7D4CF1590195F939/Projects/fashionai/train/Annotations/train.csv", header=0).columns
+#
+#

@@ -54,8 +54,25 @@ if __name__ == '__main__':
     valid_file_path = "%s/%s" % (file_dir, "train_warmup/Annotations/annotations.csv")
     train_dir = file_dir + "/train"
     valid_dir = file_dir + "/train_warmup"
-    category = "blouse"
+    category = "dress"
+    # 要重新划分训练机和验证机吗? 训练机还要重新划分？现在默认是train的训练和train_warmup的验证 哦，那要整个合在一起，在拆十分之一给验证？
+    # blouse也要重新跑，如果换的花，那就重新破吧 不慢，所以用什么模型，用心的模型嘛，那个晓得。旧的模型loss降到多少，新的能将到4
+    # 这个不好说，主要是还没有比较新旧之间的差别
+    # 800多个>2的点不好弄。400多个也不好浓。 我们就按照每个点旁边的九宫格求和来吧，哪个大区那个
+    # 九宫格是啥? keyPiont 不是是一个点吗，然后他旁边不是还有八个点，求个和
+    # 旁边的那里八个? 就是im，是个灰度图，上面的每一个点不是被八个点包围吗。就九宫格-。-？?？
+    # a 中间那个点 是被8个点包围，我们用九个点来看那个keypoint概率更大
+    # keypoint不是一个圆圈吗? 那个我不知道怎么把这个那个圆圈取出来啊。啊，好难啊，我想先看看pred的800
+    # 怎么这么多，我在看图
+    # 1. 没有pad，有些还是0
+    # 2. 对于那些点多的，直接取圈最大的(这个?这个不行啊，圈是用blobdetector找出来的，我觉得是看里面的直，不是圈的大小，里面的之是概率嘛，就是这里我刚才说用九宫格求一个综合
+    # 根据峰度还是均值，均值。均值不行吧。峰值小的峰，均值就比较小？我对detect算法一窍不通。我也不同。。要不随即取一个吧。。。。那怎么可以。我觉得九宫格可以啊。好。那我们先开始ba
+    # 别的衣服训练了吧，数据v机有点乱。）
+    # 3. 有些点可以用相对位置判断，有很多case,很烦
+    # 先写一个pad,pad是什么//就是有的是0,然后在边缘，他没有detect出来哦哦。好我去改胰腺癌
     # 'blouse', 'dress', 'outwear', 'skirt', 'trousers'
+    import numpy as np
+    a =np.ones((3,3))
     annotations_csv_train = pd.read_csv(train_file_path, encoding="utf8")
     annotations_csv_train = annotations_csv_train[annotations_csv_train["image_category"] == category]
     annotations_csv_valid = pd.read_csv(valid_file_path, encoding="utf8")
