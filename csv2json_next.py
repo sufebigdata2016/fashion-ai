@@ -70,9 +70,11 @@ if __name__ == '__main__':
     # 别的衣服训练了吧，数据v机有点乱。）
     # 3. 有些点可以用相对位置判断，有很多case,很烦
     # 先写一个pad,pad是什么//就是有的是0,然后在边缘，他没有detect出来哦哦。好我去改胰腺癌
+    # xianbuyao huafen ba keyim ,dengxia, wokandao有些点是很小的一个圈，会不会小于10,我们用10×10的会不会把背景算进来，对啊
+    # 应该用255减去以后求最大的，那不就是求最小的，对，不是要考虑那个区域而不只是考虑一个点？对啊，那什么。。什么?_.
+    # 你是说求一个平均值？平均值最小?总和除以100一样的吧，我们时求得最小之吗，我们是求最大值，一样的。啥，为啥一样？=。？？womeidong?
+    # woye meiyou dong
     # 'blouse', 'dress', 'outwear', 'skirt', 'trousers'
-    import numpy as np
-    a =np.ones((3,3))
     annotations_csv_train = pd.read_csv(train_file_path, encoding="utf8")
     annotations_csv_train = annotations_csv_train[annotations_csv_train["image_category"] == category]
     annotations_csv_valid = pd.read_csv(valid_file_path, encoding="utf8")

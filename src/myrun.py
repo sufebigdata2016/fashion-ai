@@ -82,20 +82,23 @@ def im_no_pad(im):
     return im[10:-10, 10:-10, :]
 
 
-# 我再插入一个函数吧，九宫格找keypoint的？这样可以吗, 要pt在边缘 就减不了5啊。还要pad一下？
+# 我再插入一个函数吧，九宫格找keypoint的？这样可以吗, 要pt在边缘 就减不了5啊。还要pad一下？shi zuixiaozhi ma ?
+# 他的黑点是<255,背景白色=没55哦知道了=，但是我看他有些预测的挺好的0.0, 啊，，那就是模型不行哈哈。要该嘛?
+# 蜗居的是不是应该直接预测valid然后看错了哪些，错误绿多少
+# 不然我没无法评价这个方法好不好，恩，那我来写valid.hha
 def pixel_prob_calc(im, keypoints):
     # input: im 3-D, list of cv2.keypoints
     # output: single cv2.keypoints
     if len(keypoints) == 1:
         return keypoints
 
-    biggest = 0
+    biggest = 25500
     single_keypoint = []
     for i in keypoints:
         tmp_im = np.pad(cv2.cvtColor(im, cv2.COLOR_RGB2GRAY), [[5, 5], [5, 5]], 'symmetric')
         SUM = np.sum(tmp_im[int(i.pt[0] + 5) - 5:int(i.pt[0] + 5) + 5,
                      int(i.pt[1] + 5) - 5: int(i.pt[1] + 5) + 5])  # 这输入法有毒啊，圈加起来也行啊我是想九个点，那就圈加起来吧
-        if SUM > biggest:
+        if SUM < biggest:
             biggest = SUM.copy()
             single_keypoint = [i]
     return single_keypoint
@@ -155,7 +158,9 @@ def keypoints_gen(pred_y, image_size, need_cols):
 def compare_default(key_points_data):
     # 九宫格找keypoint, keyiba, kanyunle, shishikan
     # 添加keypoints__
-    # 这个方法好像不太行
+    # youyixie还是部队，但是已经好很多了，还有什么操作可以提升。规则吗?太麻烦了吧，是很麻烦
+    # 要不然我们先训练万，提交了先，之后慢慢改对三。生成
+    # 可以对train进行预测，然后选择train预测自己预测错了的，然后用这种方法减少点，去看他的准确率
     kd = {}
     for col, im in key_points_data["pred"].items():
         keypoints = key_points_data["keypoints_"][col]
@@ -192,7 +197,7 @@ def compare_unique(key_points_data):
         else:
             return a, b
 
-    x = {col: x.pt for col, x in key_points_data["keypoints_"].items()}
+    x = {col: [i.pt for i in x] for col, x in key_points_data["keypoints_"].items()}
 
     x["neckline_left"], x["neckline_right"] = pair_pos(x["neckline_left"], x["neckline_right"])
     x["shoulder_left"], x["shoulder_right"] = pair_pos(x["shoulder_left"], x["shoulder_right"])
@@ -245,20 +250,20 @@ parser.add_argument('--resolution', type=str, default='432x368', help='network i
 parser.add_argument('--model', type=str, default='mobilenet_thin', help='cmu / mobilenet_thin/ model_path')
 parser.add_argument('--testdir', type=str, default='[None]', help='test dir')
 parser.add_argument('--outputdir', type=str, default='[None]', help='output dir')
-parser.add_argument('--traindir', type=str, default='[None]', help='train dir')
+parser.add_argument('--coldir', type=str, default='[None]', help='train dir')
 HOME_PATH = "/media/yanpan/7D4CF1590195F939"
 # HOME_PATH = "D:"
 args = parser.parse_args(
     f"--model {HOME_PATH}/Projects/tf-pose-model/myblouse/tf-pose-3-blouse/graph_freeze.pb "
     "--resolution 368x368 "
-    f"--traindir {HOME_PATH}/Projects/fashionai/mytrain/myblouse "
-    f"--outputdir {HOME_PATH}/Projects/fashionai/pred/tf-pose-3-blouse/blouse "
-    f"--testdir {HOME_PATH}/Projects/fashionai/test/Images/blouse".split())
+    f"--coldir {HOME_PATH}/Projects/fashionai/mytrain/myblouse "  # need col
+    f"--outputdir {HOME_PATH}/Projects/fashionai/valid/tf-pose-3-blouse/blouse "
+    f"--testdir {HOME_PATH}/Projects/fashionai/train_warmup/Images/blouse".split())
 
 image_paths = [args.testdir + "/" + x for x in os.listdir(args.testdir)]
 images = [read_img(image_path, None, None) for image_path in image_paths]
 image_sizes = [test_image.shape[:2] for test_image in images]
-with open(args.traindir + "/annotations/need_cols.txt", "r", encoding="utf8") as f:
+with open(args.coldir + "/annotations/need_cols.txt", "r", encoding="utf8") as f:
     need_cols = [x.strip() for x in f.readlines()]
 
 
@@ -290,7 +295,7 @@ if __name__ == '__main__':
         # chifan hao
         count = {}
         for col, pos in pred_image_im_update["keypoints_"].items():
-            if len(pos) > 1:
+            if len(pos) != 1:
                 count[col] = len(pos)
         if len(count) > 0:
             print("more than 1 points! %5s" % k, image_paths[k], count)
