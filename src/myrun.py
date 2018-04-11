@@ -5,7 +5,7 @@ import cv2
 import numpy as np
 import tensorflow as tf
 import json
-import pandas as pd
+from concurrent.futures import ProcessPoolExecutor
 import matplotlib.pyplot as plt
 
 logger = logging.getLogger('TfPoseEstimator')
@@ -92,13 +92,13 @@ def pixel_prob_calc(im, keypoints):
     if len(keypoints) == 1:
         return keypoints
 
-    biggest = 25500
+    biggest = 0
     single_keypoint = []
     for i in keypoints:
         tmp_im = np.pad(cv2.cvtColor(im, cv2.COLOR_RGB2GRAY), [[5, 5], [5, 5]], 'symmetric')
         SUM = np.sum(tmp_im[int(i.pt[0] + 5) - 5:int(i.pt[0] + 5) + 5,
                      int(i.pt[1] + 5) - 5: int(i.pt[1] + 5) + 5])  # 这输入法有毒啊，圈加起来也行啊我是想九个点，那就圈加起来吧
-        if SUM < biggest:
+        if SUM > biggest:
             biggest = SUM.copy()
             single_keypoint = [i]
     return single_keypoint
@@ -257,15 +257,14 @@ args = parser.parse_args(
     f"--model {HOME_PATH}/Projects/tf-pose-model/myblouse/tf-pose-3-blouse/graph_freeze.pb "
     "--resolution 368x368 "
     f"--coldir {HOME_PATH}/Projects/fashionai/mytrain/myblouse "  # need col
-    f"--outputdir {HOME_PATH}/Projects/fashionai/valid/tf-pose-3-blouse/blouse "
+    f"--outputdir {HOME_PATH}/Projects/fashionai/valid/tf-pose-3.1-blouse/blouse "
     f"--testdir {HOME_PATH}/Projects/fashionai/train_warmup/Images/blouse".split())
 
 image_paths = [args.testdir + "/" + x for x in os.listdir(args.testdir)]
 images = [read_img(image_path, None, None) for image_path in image_paths]
 image_sizes = [test_image.shape[:2] for test_image in images]
 with open(args.coldir + "/annotations/need_cols.txt", "r", encoding="utf8") as f:
-    need_cols = [x.strip() for x in f.readlines()]
-
+    need_cols = [x.strip() for x in f.readlines()][2:]
 
 if __name__ == '__test__':
     w, h = model_wh(args.resolution)
@@ -276,37 +275,44 @@ if __name__ == '__test__':
     with open(args.outputdir + "/" + "pred_images.npy", "wb") as f:
         np.save(f, pred_images)
 
+
+def submit(im_args):
+    k, pred_image, image_size, image_path, image = im_args
+    pred_image_im = keypoints_gen(pred_image, image_size, need_cols)
+    # compare_unique: generate pred_image_keypoint_position, single per keypoint
+    # pred_image_keypoint_position = compare_unique(pred_image_im)
+    pred_image_im_update = compare_default(pred_image_im)
+
+    # detect if pred_image_keypoint_position has more than 1 points
+    # 没有画预测的图，啥 ，进步i适合i虎i画的吗， 没有现在预测的图，看不到究竟是啥，，，，？？
+    # 就是现在预测只有一个了，及偶没有图了，哦 对啊，那要保存之前的图来对比吧？现在正在覆盖。。
+    # 现在根本就没画，没画？不是在跑吗，我只花了>2点的图。这样啊，那要都画吗，
+    # chifan hao
+    count = {}
+    for col, pos in pred_image_im_update["keypoints_"].items():
+        if len(pos) != 1:
+            count[col] = len(pos)
+    if len(count) > 0:
+        logger.info("more than 1 points! %5s %s %s" % (k, image_path, count))
+        #
+        # if k % 10000 == 10000 - 1:
+        save_path = args.outputdir + "/" + image_path.split("/")[-1]
+        draw_keypoint(pred_image_im_update, image, save_path)
+
+    outcome_dict_tmp = {"id": image_path,
+                        "pos": {col: [i.pt for i in x] for col, x in pred_image_im_update["keypoints__"].items()}}
+    return outcome_dict_tmp
+
+
 if __name__ == '__main__':
     with open(args.outputdir + "/" + "pred_images.npy", "rb") as f:
         pred_images = np.load(f)
 
     # pred_images_dict is a list of dicts, every dict contains
-    outcome = []
-    for k, pred_image in enumerate(pred_images):
-        pred_image_im = keypoints_gen(pred_image, image_sizes[k], need_cols[2:])
-        # compare_unique: generate pred_image_keypoint_position, single per keypoint
-        # pred_image_keypoint_position = compare_unique(pred_image_im)
-        pred_image_im_update = compare_default(pred_image_im)
-
-        # detect if pred_image_keypoint_position has more than 1 points
-        # 没有画预测的图，啥 ，进步i适合i虎i画的吗， 没有现在预测的图，看不到究竟是啥，，，，？？
-        # 就是现在预测只有一个了，及偶没有图了，哦 对啊，那要保存之前的图来对比吧？现在正在覆盖。。
-        # 现在根本就没画，没画？不是在跑吗，我只花了>2点的图。这样啊，那要都画吗，
-        # chifan hao
-        count = {}
-        for col, pos in pred_image_im_update["keypoints_"].items():
-            if len(pos) != 1:
-                count[col] = len(pos)
-        if len(count) > 0:
-            print("more than 1 points! %5s" % k, image_paths[k], count)
-            #
-            # if k % 10000 == 10000 - 1:
-            save_path = args.outputdir + "/" + image_paths[k].split("/")[-1]
-            draw_keypoint(pred_image_im_update, images[k], save_path)
-
-        outcome_dict_tmp = {"id": image_paths[k],
-                            "pos": {col: [i.pt for i in x] for col, x in pred_image_im_update["keypoints__"].items()}}
-        outcome.append(outcome_dict_tmp)
+    executer = ProcessPoolExecutor(max_workers=6)
+    im_args = zip(range(len(pred_images)), pred_images, image_sizes, image_paths, images)
+    outcome = executer.map(submit, im_args)
+    outcome = list(outcome)
 
     with open(args.outputdir + "/pred.json", "w") as f:
         json.dump(outcome, f)
@@ -317,12 +323,11 @@ if __name__ == '__tmp__':
     k = image_paths.index(ppp)
     pred_image = pred_images[k]
 
-# 重叠两个区域，选取覆盖最多的那个像素块：2值化最黑的地方
-# 然后遇到覆盖最多的超过2个，就删除已经被前面找到的那些位置
+    # 重叠两个区域，选取覆盖最多的那个像素块：2值化最黑的地方
+    # 然后遇到覆盖最多的超过2个，就删除已经被前面找到的那些位置
 
-
-# #预测结果，多个keypoints的channel直接采用pt的九宫格平均
-# if __name__ == '__main__':
-#     a = pd.read_csv("/media/yanpan/7D4CF1590195F939/Projects/fashionai/train/Annotations/train.csv", header=0).columns
-#
-#
+    # #预测结果，多个keypoints的channel直接采用pt的九宫格平均
+    # if __name__ == '__main__':
+    #     a = pd.read_csv("/media/yanpan/7D4CF1590195F939/Projects/fashionai/train/Annotations/train.csv", header=0).columns
+    #
+    #

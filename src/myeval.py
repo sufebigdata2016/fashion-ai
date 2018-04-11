@@ -97,7 +97,7 @@ def metric_ne_all(truth_df, pred_df):
 if __name__ == '__main__':
     home_path = "/media/yanpan/7D4CF1590195F939/Projects/fashionai"
     truth_path = f"{home_path}/mytrain/myblouse/annotations/person_keypoints_val2017.json"
-    pred_path = f"{home_path}/valid/tf-pose-3-blouse/blouse/pred.json"
+    pred_path = f"{home_path}/valid/tf-pose-3.1-blouse/blouse/pred.json"
     col_path = f"{home_path}/mytrain/myblouse/annotations/need_cols.txt"
     with open(col_path, "r", encoding="utf8") as f:
         need_cols = [x.strip() for x in f.readlines()][2:]
@@ -106,6 +106,11 @@ if __name__ == '__main__':
     truth_df = truth_gen(truth_path)
     score_all = metric_ne_all(truth_df, pred_df)
     print(score_all)
+
+    """
+    九宫格最大值 0.1170798805894443
+    九宫格最小值 0.1173703610801227
+    """
 
     scores = pd.Series({im_name: metric_ne(truth_df.loc[im_name], pred_df.loc[im_name]) for im_name in truth_df.index})
     print(scores.sort_values())
