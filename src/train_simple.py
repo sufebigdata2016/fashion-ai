@@ -51,12 +51,12 @@ if __name__ == '__main__':
     parser.add_argument('--input-height', type=int, default=368)
     parser.add_argument('--sample_path', help="sample_path to eval during training, limit 12")
     args = parser.parse_args("""--model cmu
-                                --datapath /media/yanpan/7D4CF1590195F939/Projects/fashionai/mytrain/myblouse/annotations/ 
-                                --imgpath /media/yanpan/7D4CF1590195F939/Projects/fashionai/mytrain/myblouse/
-                                --sample_path /media/yanpan/7D4CF1590195F939/Projects/fashionai/mytrain/myblouse/val2017
-                                --batchsize 32 --lr 0.0001 
-                                --modelpath /media/yanpan/7D4CF1590195F939/Projects/tf-pose-model/myblouse/tf-pose-4-blouse/ 
-                                --logpath /media/yanpan/7D4CF1590195F939/Projects/tf-pose-model/myblouse/tf-pose-4-blouse/
+                                --datapath /media/yanpan/7D4CF1590195F939/Projects/fashionai/mytrain/myblouse_prof/annotations/ 
+                                --imgpath /media/yanpan/7D4CF1590195F939/Projects/fashionai/mytrain/myblouse_prof/
+                                --sample_path /media/yanpan/7D4CF1590195F939/Projects/fashionai/mytrain/myblouse_prof/val2017
+                                --batchsize 32 --lr 0.0005 
+                                --modelpath /media/yanpan/7D4CF1590195F939/Projects/tf-pose-model/myblouse_prof/tf-pose-1-blouse/ 
+                                --logpath /media/yanpan/7D4CF1590195F939/Projects/tf-pose-model/myblouse_prof/tf-pose-1-blouse/
                                 """.split())
     # --ckptpath /media/yanpan/7D4CF1590195F939/Projects/mytrain/myblouse/tf-pose-1-blouse/cmu_batch:32_lr:0.0001_gpus:1_368x368_/checkpoint
     # --ckptpath /media/yanpan/7D4CF1590195F939/Projects/tf-pose-5/cmu_batch:32_lr:0.001_gpus:1_368x368_/checkpoint
