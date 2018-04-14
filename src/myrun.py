@@ -253,12 +253,16 @@ parser.add_argument('--outputdir', type=str, default='[None]', help='output dir'
 parser.add_argument('--coldir', type=str, default='[None]', help='train dir')
 HOME_PATH = "/media/yanpan/7D4CF1590195F939"
 # HOME_PATH = "D:"
+category = 'blouse'
+# 'blouse', 'dress', 'outwear', 'skirt', 'trousers'
 args = parser.parse_args(
-    f"--model {HOME_PATH}/Projects/tf-pose-model/myblouse/tf-pose-3-blouse/graph_freeze.pb "
+    f"--model {HOME_PATH}/Projects/tf-pose-model/my{category}_prof/tf-pose-1-{category}/graph_freeze.pb "
     "--resolution 368x368 "
-    f"--coldir {HOME_PATH}/Projects/fashionai/mytrain/myblouse "  # need col
-    f"--outputdir {HOME_PATH}/Projects/fashionai/valid/tf-pose-3.1-blouse/blouse "
-    f"--testdir {HOME_PATH}/Projects/fashionai/train_warmup/Images/blouse".split())
+    f"--coldir {HOME_PATH}/Projects/fashionai/mytrain/my{category}_prof "  # need col
+    f"--outputdir {HOME_PATH}/Projects/fashionai/pred/my{category}_prof/tf-pose-1-{category}/{category} "
+    # f"--testdir {HOME_PATH}/Projects/fashionai/mytrain/my{category}_prof/val2017".split()
+    f"--testdir {HOME_PATH}/Projects/fashionai/test/Images/{category}".split()
+)
 
 image_paths = [args.testdir + "/" + x for x in os.listdir(args.testdir)]
 images = [read_img(image_path, None, None) for image_path in image_paths]
@@ -266,7 +270,7 @@ image_sizes = [test_image.shape[:2] for test_image in images]
 with open(args.coldir + "/annotations/need_cols.txt", "r", encoding="utf8") as f:
     need_cols = [x.strip() for x in f.readlines()][2:]
 
-if __name__ == '__test__':
+if __name__ == '__main1__':
     w, h = model_wh(args.resolution)
     graph = load_graph(args.model)
     pred_images = graph_pred(graph, images, (368, 368))

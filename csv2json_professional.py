@@ -54,7 +54,7 @@ if __name__ == '__main__':
     valid_file_path = "%s/%s" % (file_dir, "train_warmup/Annotations/annotations.csv")
     train_dir = file_dir + "/train"
     valid_dir = file_dir + "/train_warmup"
-    category = "blouse"
+    category = "trousers"
     # 'blouse', 'dress', 'outwear', 'skirt', 'trousers'
 
     # 要重新划分训练机和验证机吗? 训练机还要重新划分？现在默认是train的训练和train_warmup的验证 哦，那要整个合在一起，在拆十分之一给验证？

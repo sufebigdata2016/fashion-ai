@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 
 
+category = "blouse"
+
 def truth_gen(truth_path):
     with open(truth_path, "r", encoding="utf8") as f:
         data = json.load(f)
@@ -28,7 +30,10 @@ def truth_gen(truth_path):
             return 99999999
         return np.sum((np.array(l) - np.array(r)) ** 2) ** 0.5
 
-    kpt_df["sk"] = kpt_df[["armpit_left", "armpit_right"]].T.apply(lambda x: dist_sk(*list(x)))
+    if category in ["blouse", "dress", "outwear"]:
+        kpt_df["sk"] = kpt_df[["armpit_left", "armpit_right"]].T.apply(lambda x: dist_sk(*list(x)))
+    elif category in ['skirt', 'trousers']:
+        kpt_df["sk"] = kpt_df[["waistband_left", "waistband_right"]].T.apply(lambda x: dist_sk(*list(x)))
 
     return kpt_df
 
@@ -76,7 +81,7 @@ def metric_ne(truth, pred):
     return sum(score.values()) / sum(count.values())
 
 
-def metric_ne_all(truth_df, pred_df):
+def metric_ne_all(truth_df, pred_df, detail=False):
     all_score = 0
     all_count = 0
     for im_name in truth_df.index:
@@ -91,25 +96,29 @@ def metric_ne_all(truth_df, pred_df):
             count[col] = vk
         all_score += sum(score.values())
         all_count += sum(count.values())
-    return all_score / all_count
-
+    if detail:
+        return {"ne": all_score / all_count, "score": all_score, "count": all_count}
+    else:
+        return {"ne": all_score / all_count}
 
 if __name__ == '__main__':
+    category = "trousers"
+    # 'blouse', 'dress', 'outwear', 'skirt', 'trousers'
     home_path = "/media/yanpan/7D4CF1590195F939/Projects/fashionai"
-    truth_path = f"{home_path}/mytrain/myblouse/annotations/person_keypoints_val2017.json"
-    pred_path = f"{home_path}/valid/tf-pose-3.1-blouse/blouse/pred.json"
-    col_path = f"{home_path}/mytrain/myblouse/annotations/need_cols.txt"
+    truth_path = f"{home_path}/mytrain/my{category}_prof/annotations/person_keypoints_val2017.json"
+    pred_path = f"{home_path}/valid/my{category}_prof/tf-pose-1.1-{category}/{category}/pred.json"
+    col_path = f"{home_path}/mytrain/my{category}_prof/annotations/need_cols.txt"
     with open(col_path, "r", encoding="utf8") as f:
         need_cols = [x.strip() for x in f.readlines()][2:]
 
     pred_df = pred_gen(pred_path)
     truth_df = truth_gen(truth_path)
-    score_all = metric_ne_all(truth_df, pred_df)
-    print(score_all)
+    result_dict = metric_ne_all(truth_df, pred_df, True)
+    print(result_dict["score"], result_dict["count"])
 
     """
-    九宫格最大值 0.1170798805894443
-    九宫格最小值 0.1173703610801227
+    九宫格最大值 0.08101648583522379 (740.5629714605923 + 756.9023514266906 + 295.73727772688864 +479.00485238690044 +629.7220531308088 )/( 10888+8223+7523+3466+5719)
+    九宫格最小值 0.08124102249936928 (733.5365316448721 +804.1557639415904 +289.24377459010645 +465.3547746600559+617.6813400682834)/(10888 + 8223+7523+ 3466+ 5719)
     """
 
     scores = pd.Series({im_name: metric_ne(truth_df.loc[im_name], pred_df.loc[im_name]) for im_name in truth_df.index})

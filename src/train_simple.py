@@ -51,12 +51,12 @@ if __name__ == '__main__':
     parser.add_argument('--input-height', type=int, default=368)
     parser.add_argument('--sample_path', help="sample_path to eval during training, limit 12")
     args = parser.parse_args("""--model cmu
-                                --datapath /media/yanpan/7D4CF1590195F939/Projects/fashionai/mytrain/myblouse_prof/annotations/ 
-                                --imgpath /media/yanpan/7D4CF1590195F939/Projects/fashionai/mytrain/myblouse_prof/
-                                --sample_path /media/yanpan/7D4CF1590195F939/Projects/fashionai/mytrain/myblouse_prof/val2017
-                                --batchsize 32 --lr 0.0005 
-                                --modelpath /media/yanpan/7D4CF1590195F939/Projects/tf-pose-model/myblouse_prof/tf-pose-1-blouse/ 
-                                --logpath /media/yanpan/7D4CF1590195F939/Projects/tf-pose-model/myblouse_prof/tf-pose-1-blouse/
+                                --datapath /media/yanpan/7D4CF1590195F939/Projects/fashionai/mytrain/mytrousers_prof/annotations/ 
+                                --imgpath /media/yanpan/7D4CF1590195F939/Projects/fashionai/mytrain/mytrousers_prof/
+                                --sample_path /media/yanpan/7D4CF1590195F939/Projects/fashionai/mytrain/mytrousers_prof/val2017
+                                --batchsize 32 --lr 0.0001 
+                                --modelpath /media/yanpan/7D4CF1590195F939/Projects/tf-pose-model/mytrousers_prof/tf-pose-1-trousers/ 
+                                --logpath /media/yanpan/7D4CF1590195F939/Projects/tf-pose-model/mytrousers_prof/tf-pose-1-trousers/
                                 """.split())
     # --ckptpath /media/yanpan/7D4CF1590195F939/Projects/mytrain/myblouse/tf-pose-1-blouse/cmu_batch:32_lr:0.0001_gpus:1_368x368_/checkpoint
     # --ckptpath /media/yanpan/7D4CF1590195F939/Projects/tf-pose-5/cmu_batch:32_lr:0.001_gpus:1_368x368_/checkpoint
@@ -194,7 +194,7 @@ if __name__ == '__main__':
     valid_img = tf.summary.image('validation sample', sample_valid, 12)
     # valid_loss_t = tf.summary.scalar("loss_valid", valid_loss)
     valid_loss_ll_t = tf.summary.scalar("loss_valid_ll_heat", valid_loss_ll_heat)
-    merged_validate_op = tf.summary.merge([train_img, valid_img,  valid_loss_ll_t])  #  valid_loss_t,
+    merged_validate_op = tf.summary.merge([train_img, valid_img, valid_loss_ll_t])  # valid_loss_t,
 
     saver = tf.train.Saver(max_to_keep=100)
     config = tf.ConfigProto(allow_soft_placement=True, log_device_placement=False)
@@ -303,7 +303,7 @@ if __name__ == '__main__':
                     outputs,
                     feed_dict={q_inp: np.array((sample_image + val_image) * (args.batchsize // 16))}
                 )
-                pafMat, heatMat = outputMat[:, :, :, 4:], outputMat[:, :, :, :4]
+                pafMat, heatMat = outputMat[:, :, :, :], outputMat[:, :, :, :4]  # pafMat useless outputMat[:, :, :, 4:]
 
                 sample_results = []
                 for i in range(len(sample_image)):
