@@ -7,6 +7,7 @@ import tensorflow as tf
 import json
 from concurrent.futures import ProcessPoolExecutor
 import matplotlib.pyplot as plt
+import re
 
 logger = logging.getLogger('TfPoseEstimator')
 logger.setLevel(logging.DEBUG)
@@ -65,13 +66,13 @@ def graph_pred(graph, test_images, resize):
     def feature(test_features):
         return cv2.resize(test_features, resize)[np.newaxis, :, :, :].astype(np.float32)
 
-    pred_y = []
+    pred_ys = []
     with tf.Session(graph=graph) as sess:
         for test_image in test_images:
-            pred_y_tmp = sess.run(y, feed_dict={x: feature(test_image)})
-            pred_y.append(pred_y_tmp)
-
-    return pred_y
+            pred_y_tmp = sess.run(y, feed_dict={x: feature(test_image["image"])})
+            test_image["pred_y"] = pred_y_tmp
+            pred_ys.append(test_image)
+    return pred_ys
 
 
 def im_pad(im):
@@ -92,13 +93,15 @@ def pixel_prob_calc(im, keypoints):
     if len(keypoints) == 1:
         return keypoints
 
-    biggest = 0
+    biggest = 255
+    ps = 15
     single_keypoint = []
     for i in keypoints:
-        tmp_im = np.pad(cv2.cvtColor(im, cv2.COLOR_RGB2GRAY), [[5, 5], [5, 5]], 'symmetric')
-        SUM = np.sum(tmp_im[int(i.pt[0] + 5) - 5:int(i.pt[0] + 5) + 5,
-                     int(i.pt[1] + 5) - 5: int(i.pt[1] + 5) + 5])  # 这输入法有毒啊，圈加起来也行啊我是想九个点，那就圈加起来吧
-        if SUM > biggest:
+        tmp_im = np.pad(cv2.cvtColor(im, cv2.COLOR_RGB2GRAY), [[ps, ps], [ps, ps]], 'symmetric')
+        SUM = np.sum(tmp_im[int(i.pt[1] + ps) - ps:int(i.pt[1] + ps) + ps,
+                     int(i.pt[0] + ps) - ps: int(i.pt[0] + ps) + ps])  # 这输入法有毒啊，圈加起来也行啊我是想九个点，那就圈加起来吧
+        SUM = SUM / (2 * ps) ** 2
+        if SUM < biggest:
             biggest = SUM.copy()
             single_keypoint = [i]
     return single_keypoint
@@ -109,14 +112,16 @@ def pixel_prob_calc(im, keypoints):
 
 # TODO: ckpt loader not support
 
-def keypoints_gen(pred_y, image_size, need_cols):
+def keypoints_gen(pred_image):
+    # pred_y is a dict
+    # image_name, image, image_size, need_cols, pred_y
     # image_size
     im_pred = {}
     keypoints_ = {}
-    for k, col in enumerate(need_cols):  # col = 'cuff_left_out'
-        pred_y_tmp = 255 - cv2.resize(pred_y[0], image_size[::-1])[:, :, k:k + 1]
-
-        im = pred_y_tmp.copy()
+    for k, col in enumerate(pred_image["need_cols"]):  # col = 'cuff_left_out'
+        pred_image_tmp = 255 - cv2.resize(pred_image["pred_y"][0],
+                                          pred_image["image_size"][::-1])[:, :, k:k + 1]
+        im = pred_image_tmp.copy()
 
         def float2unit8(im):
             return (255 * (im - np.min(im)) / (np.max(im) - np.min(im))).astype(np.uint8)
@@ -150,96 +155,43 @@ def keypoints_gen(pred_y, image_size, need_cols):
 
         keypoints = detector.detect(im_pad(im))
         keypoints_[col] = keypoints
+    pred_image["kp_data"] = {"pred": im_pred, "keypoints_": keypoints_}
+    return pred_image
 
-    return {"pred": im_pred,
-            "keypoints_": keypoints_}
 
-
-def compare_default(key_points_data):
+def compare_default(pred_image):
     # 九宫格找keypoint, keyiba, kanyunle, shishikan
     # 添加keypoints__
     # youyixie还是部队，但是已经好很多了，还有什么操作可以提升。规则吗?太麻烦了吧，是很麻烦
     # 要不然我们先训练万，提交了先，之后慢慢改对三。生成
     # 可以对train进行预测，然后选择train预测自己预测错了的，然后用这种方法减少点，去看他的准确率
     kd = {}
-    for col, im in key_points_data["pred"].items():
-        keypoints = key_points_data["keypoints_"][col]
+    for col, im in pred_image["kp_data"]["pred"].items():
+        keypoints = pred_image["kp_data"]["keypoints_"][col]
         keypoints_update = pixel_prob_calc(im, keypoints)
         kd[col] = keypoints_update
-    key_points_data["keypoints__"] = kd
-    return key_points_data
+    pred_image["kp_data"]["keypoints__"] = kd
+    return pred_image
 
 
-def compare_unique(key_points_data):
-    # input: keypoint_detect: <col, np.array>, keypoint_position: <col, list>
-    # "neckline_left", "neckline_right",
-    # "center_front",
-    # "shoulder_left", "shoulder_right",
-    # "armpit_left", "armpit_right",
-    # "cuff_left_in", "cuff_right_in",
-    # "cuff_left_out","cuff_right_out",
-    # "top_hem_left", "top_hem_right"
-
-    def pair_pos(a, b):
-        # a : [pos1, pos2]
-        # b : [pos1, pos2]
-        # left, right
-        # only compare pairs less than 3
-        if len(a) * len(b) == 1:
-            tmp = sorted(a + b)
-            return tmp[:1], tmp[-1:]
-        elif len(a) * len(b) == 2:
-            tmp = (a if len(a) == 2 else []) + (b if len(b) == 2 else [])
-            return tmp[:1], tmp[-1:]
-        elif len(a) == 2 and len(b) == 2:
-            tmp = sorted(a)[:1] + sorted(b)[-1:]
-            return tmp[:1], tmp[-1:]
-        else:
-            return a, b
-
-    x = {col: [i.pt for i in x] for col, x in key_points_data["keypoints_"].items()}
-
-    x["neckline_left"], x["neckline_right"] = pair_pos(x["neckline_left"], x["neckline_right"])
-    x["shoulder_left"], x["shoulder_right"] = pair_pos(x["shoulder_left"], x["shoulder_right"])
-    x["armpit_left"], x["armpit_right"] = pair_pos(x["armpit_left"], x["armpit_right"])
-    x["cuff_left_in"], x["cuff_right_in"] = pair_pos(x["cuff_left_in"], x["cuff_right_in"])
-    x["cuff_left_out"], x["cuff_right_out"] = pair_pos(x["cuff_left_out"], x["cuff_right_out"])
-    x["top_hem_left"], x["top_hem_right"] = pair_pos(x["top_hem_left"], x["top_hem_right"])
-
-    return x
-
-
-def draw_keypoint(key_points_data, im_origin, save_path):
-    keypoints_ = key_points_data["keypoints_"]
-    keypoints__ = key_points_data["keypoints__"]
+def draw_keypoint(pred_image, save_path):
+    keypoints_ = pred_image["kp_data"]["keypoints_"]
+    keypoints__ = pred_image["kp_data"]["keypoints__"]
 
     fig = plt.figure(figsize=(40, 20))
-    for k, (col, kps) in enumerate(key_points_data["keypoints_"].items()):
+    for k, (col, kps) in enumerate(pred_image["kp_data"]["keypoints_"].items()):
         fig.add_subplot(4, 8, k * 2 + 1)
-        tmp = cv2.drawKeypoints(im_pad(im_origin), keypoints_[col], np.array([]), (0, 0, 0),
+        tmp = cv2.drawKeypoints(im_pad(pred_image["image"]), keypoints_[col], np.array([]), (0, 0, 0),
                                 cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
         plt.imshow(cv2.cvtColor(im_no_pad(tmp), cv2.COLOR_BGR2RGB))
         plt.title(col + " %s" % len(keypoints_[col]))
 
         fig.add_subplot(4, 8, k * 2 + 2)
-        tmp = cv2.drawKeypoints(im_pad(im_origin), keypoints__[col], np.array([]), (255, 0, 0),
+        tmp = cv2.drawKeypoints(im_pad(pred_image["image"]), keypoints__[col], np.array([]), (255, 0, 0),
                                 cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
         plt.imshow(cv2.cvtColor(im_no_pad(tmp), cv2.COLOR_BGR2RGB))
         plt.title(col + " update %s" % len(keypoints__[col]))
 
-        # im and keypoint dectect in one picture
-        # im_plus_keypoint = 255 - im + cv2.cvtColor(im_origin, cv2.COLOR_BGR2RGB)
-        # plt.imshow(im_plus_keypoint / np.max(im_plus_keypoint, axis=(0, 1)))
-
-        # a = 255 - im
-        # a = cv2.cvtColor(a, cv2.COLOR_RGB2GRAY)
-        # b = im_origin.copy()
-        # th = max(1, len(im_with_position[col]))
-        # b[:, :, 0] = b[:, :, 0] * 0.3 + a * 0.7 / th
-        # b[:, :, 1] = b[:, :, 1] * 0.3
-        # b[:, :, 2] = b[:, :, 2] * 0.3
-        # im_plus_keypoint = b
-        # plt.imshow(cv2.cvtColor(im_plus_keypoint, cv2.COLOR_BGR2RGB))
     fig.savefig(save_path)
     plt.close()
     return save_path
@@ -253,7 +205,7 @@ parser.add_argument('--outputdir', type=str, default='[None]', help='output dir'
 parser.add_argument('--coldir', type=str, default='[None]', help='train dir')
 HOME_PATH = "/media/yanpan/7D4CF1590195F939"
 # HOME_PATH = "D:"
-category = 'blouse'
+category = 'trousers'
 # 'blouse', 'dress', 'outwear', 'skirt', 'trousers'
 args = parser.parse_args(
     f"--model {HOME_PATH}/Projects/tf-pose-model/my{category}_prof/tf-pose-1-{category}/graph_freeze.pb "
@@ -265,13 +217,22 @@ args = parser.parse_args(
 )
 
 image_paths = [args.testdir + "/" + x for x in os.listdir(args.testdir)]
-images = [read_img(image_path, None, None) for image_path in image_paths]
-image_sizes = [test_image.shape[:2] for test_image in images]
 with open(args.coldir + "/annotations/need_cols.txt", "r", encoding="utf8") as f:
     need_cols = [x.strip() for x in f.readlines()][2:]
+images = []
+for image_path in image_paths:
+    image_name = re.sub("^.*(?=Images)", "", image_path)
+    image = {}
+    image["image_name"] = image_name
+    image["image"] = read_img(image_path, None, None)
+    image["image_size"] = image["image"].shape[:2]
+    image["need_cols"] = need_cols
+    images.append(image)
+
+# images.json export?
+
 
 if __name__ == '__main1__':
-    w, h = model_wh(args.resolution)
     graph = load_graph(args.model)
     pred_images = graph_pred(graph, images, (368, 368))
     if not os.path.exists(args.outputdir):
@@ -281,8 +242,8 @@ if __name__ == '__main1__':
 
 
 def submit(im_args):
-    k, pred_image, image_size, image_path, image = im_args
-    pred_image_im = keypoints_gen(pred_image, image_size, need_cols)
+    k, pred_image = im_args
+    pred_image_im = keypoints_gen(pred_image)
     # compare_unique: generate pred_image_keypoint_position, single per keypoint
     # pred_image_keypoint_position = compare_unique(pred_image_im)
     pred_image_im_update = compare_default(pred_image_im)
@@ -293,18 +254,17 @@ def submit(im_args):
     # 现在根本就没画，没画？不是在跑吗，我只花了>2点的图。这样啊，那要都画吗，
     # chifan hao
     count = {}
-    for col, pos in pred_image_im_update["keypoints_"].items():
+    for col, pos in pred_image_im_update["kp_data"]["keypoints_"].items():
         if len(pos) != 1:
             count[col] = len(pos)
     if len(count) > 0:
-        logger.info("more than 1 points! %5s %s %s" % (k, image_path, count))
-        #
-        # if k % 10000 == 10000 - 1:
-        save_path = args.outputdir + "/" + image_path.split("/")[-1]
-        draw_keypoint(pred_image_im_update, image, save_path)
+        logger.info("more than 1 points! %5s %s %s" % (k, pred_image_im_update["image_name"], count))
+        save_path = args.outputdir + "/" + pred_image_im_update["image_name"].split("/")[-1]
+        draw_keypoint(pred_image_im_update, save_path)
 
-    outcome_dict_tmp = {"id": image_path,
-                        "pos": {col: [i.pt for i in x] for col, x in pred_image_im_update["keypoints__"].items()}}
+    outcome_dict_tmp = {"id": pred_image_im_update["image_name"],
+                        "pos": {col: [i.pt for i in x] for col, x in
+                                pred_image_im_update["kp_data"]["keypoints__"].items()}}
     return outcome_dict_tmp
 
 
@@ -313,8 +273,8 @@ if __name__ == '__main__':
         pred_images = np.load(f)
 
     # pred_images_dict is a list of dicts, every dict contains
-    executer = ProcessPoolExecutor(max_workers=6)
-    im_args = zip(range(len(pred_images)), pred_images, image_sizes, image_paths, images)
+    executer = ProcessPoolExecutor(max_workers=7)
+    im_args = zip(range(len(pred_images)), pred_images)
     outcome = executer.map(submit, im_args)
     outcome = list(outcome)
 
@@ -322,10 +282,9 @@ if __name__ == '__main__':
         json.dump(outcome, f)
 
 if __name__ == '__tmp__':
-    ppp = f"{HOME_PATH}/Projects/fashionai/test/Images/blouse/%s.jpg"
-    ppp = ppp % "0b73354dad8d031dd3f188886db59f79"
-    k = image_paths.index(ppp)
-    pred_image = pred_images[k]
+    pic_name = "5cf284e73d397fedee0c10f552e3309c"
+    need_pic = [x for x in pred_images if pic_name in x["image_name"]]
+    pred_image = need_pic[0]
 
     # 重叠两个区域，选取覆盖最多的那个像素块：2值化最黑的地方
     # 然后遇到覆盖最多的超过2个，就删除已经被前面找到的那些位置

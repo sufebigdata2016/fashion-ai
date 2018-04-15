@@ -2,8 +2,8 @@ import json
 import pandas as pd
 import numpy as np
 
-
 category = "blouse"
+
 
 def truth_gen(truth_path):
     with open(truth_path, "r", encoding="utf8") as f:
@@ -101,12 +101,13 @@ def metric_ne_all(truth_df, pred_df, detail=False):
     else:
         return {"ne": all_score / all_count}
 
+
 if __name__ == '__main__':
-    category = "trousers"
+    category = "blouse"
     # 'blouse', 'dress', 'outwear', 'skirt', 'trousers'
     home_path = "/media/yanpan/7D4CF1590195F939/Projects/fashionai"
     truth_path = f"{home_path}/mytrain/my{category}_prof/annotations/person_keypoints_val2017.json"
-    pred_path = f"{home_path}/valid/my{category}_prof/tf-pose-1.1-{category}/{category}/pred.json"
+    pred_path = f"{home_path}/valid/my{category}_prof/tf-pose-1-{category}/{category}/pred.json"
     col_path = f"{home_path}/mytrain/my{category}_prof/annotations/need_cols.txt"
     with open(col_path, "r", encoding="utf8") as f:
         need_cols = [x.strip() for x in f.readlines()][2:]
@@ -114,44 +115,50 @@ if __name__ == '__main__':
     pred_df = pred_gen(pred_path)
     truth_df = truth_gen(truth_path)
     result_dict = metric_ne_all(truth_df, pred_df, True)
-    print(result_dict["score"], result_dict["count"])
+    # print(result_dict["score"], result_dict["count"])
+    print(result_dict)
 
     """
-    九宫格最大值 0.08101648583522379 (740.5629714605923 + 756.9023514266906 + 295.73727772688864 +479.00485238690044 +629.7220531308088 )/( 10888+8223+7523+3466+5719)
-    九宫格最小值 0.08124102249936928 (733.5365316448721 +804.1557639415904 +289.24377459010645 +465.3547746600559+617.6813400682834)/(10888 + 8223+7523+ 3466+ 5719)
+    blouse
+    5:  0.06365480014787647
+    10: 0.062082154493701754
+    15: 0.0620810531643999
+    20: 0.062159597609104285
+    30: 0.06227255740166314
+    
+    dress
+    5:  0.08860700258268969
+    10: 0.08792957300689651
+    15: 0.08698836921054152
+    20: 0.08694636300859725
+    25: 0.08675139580577107
+    30: 0.08612128586206062
+    40: 0.08608220639997487
+    50: 0.0854804998513105
+    
+    outwear
+    5:  0.036788281075332656
+    10: 0.035710530346023235
+    15: 0.03563534374157036
+    20: 0.03564851505924366
+    30: 0.035652795612567574
+    
+    skirt
+    5:  0.1270994314524178
+    10: 0.12618443761807832
+    15: 0.1259053856757867
+    20: 0.12529998787517646
+    30: 0.12495066969959043
+    
+    trousers
+    5:  0.10676306262255453
+    10: 0.10662648496058096
+    15: 0.10624003376478061
+    20: 0.10633474500899222
+    30: 0.10644685099599915
+    
+    九宫格最xiao值 0.07547121297895418 (0.0620810531643999 * 10888 + 0.08698836921054152 * 8223 + 0.03563534374157036 * 7523 + 0.1259053856757867 * 3466 + 0.10624003376478061 * 5719) / (10888 + 8223 + 7523 + 3466 + 5719)
     """
 
     scores = pd.Series({im_name: metric_ne(truth_df.loc[im_name], pred_df.loc[im_name]) for im_name in truth_df.index})
     print(scores.sort_values())
-    """
-    8182410a941c048f1f50365cae7b6596    0.647701
-    d1cd22f264a66ca1bc04c123c4d301b1    0.664920
-    d31711aefbf4e86218f47d3e624a2a39    0.670269
-    55c44fc4c55fd69c3fa0d4298d1dc42f    0.673277
-    425a9a9278389c53690a98ecc260dea1    0.677799
-    a32862baff77098cb26e65722a7f8e65    0.680916
-    7771c48053633b8932da2fe48db8acce    0.681249
-    004fb4dde569db5d748c8f5328e230c6    0.690269
-    e8506f8a7b9ee69dbe9125b9446dfe5a    0.696759
-    b212ff70d65997356648beb1f23a6132    0.715210
-    44c24c324fd7ba4508b31e0ac5a18f4a    0.721080
-    dc63be03c0e6f24598671e32720595a0    0.722112
-    ba59be6a5b2ded9818a35f3ebeba4725    0.725348
-    10e3180b98e3c12786d606d4dd3ab187    0.726537
-    3ff96b011eca33ef1e5611361dbba21d    0.819179
-    30440d161cd325ed5445aa984bdec0f2    0.844745
-    43038b05237534a18831d8406b9d2108    0.854404
-    b4a3dc125fccb12aa05547c411e95085    0.855572
-    b57cab09491225877b67b07a43b71245    0.922532
-    80ad6165f815cc976eff9d44fd41a0ef    0.988153
-    bdaaa3f92d8174c702d030a2cfde0e71    1.116625
-    8a9dcd8e45a27c629d747bfa43f01907    1.238157
-    ad057b6125a0b671383e5164b7384a5b    1.350962
-    24eaae82cf80dad3186eb4b6eaaf0bf0    1.489926
-    8e20c2046266ee66b100eb273f166768    1.534567
-    a3eb8e43cbd1cd486d80aec5d389eac5    1.603260
-    bc578726ecfc773ea1fed8573be7b467    1.680018
-    57041cd7c3c1abc14bf92566c97b690a    1.699367
-    f527913dd1e10b401b043ae524856601    2.769326
-    923d61839fb6c2123484af7bb29ec34e    4.246136
-    """

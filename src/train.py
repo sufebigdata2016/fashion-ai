@@ -55,6 +55,7 @@ if __name__ == '__main__':
                                 --imgpath /media/yanpan/7D4CF1590195F939/Projects/fashionai/mytrain/myblouse/
                                 --sample_path /media/yanpan/7D4CF1590195F939/Projects/fashionai/mytrain/myblouse/val2017
                                 --batchsize 32 --lr 0.0001 
+                                --ckptpath /media/yanpan/7D4CF1590195F939/Projects/tf-pose-model/myblouse/tf-pose-2-blouse/cmu_batch:32_lr:0.0001_gpus:1_368x368_/checkpoint
                                 --modelpath /media/yanpan/7D4CF1590195F939/Projects/tf-pose-model/myblouse/tf-pose-2-blouse/ 
                                 --logpath /media/yanpan/7D4CF1590195F939/Projects/tf-pose-model/myblouse/tf-pose-2-blouse/
                                 """.split())
