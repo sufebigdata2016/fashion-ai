@@ -45,7 +45,8 @@ def pred_gen(pred_path):
     for imkpt in data:
         im_name = imkpt["id"].split("/")[-1].split(".")[0]
         # xianzai pos <= 1
-        im_pos = {col: pos[0] if len(pos) > 0 else [0, 0] for col, pos in imkpt["pos"].items()}
+        im_pos = {col: [pos[0][0], pos[0][1]] if len(pos) > 0 else [0, 0]
+                  for col, pos in imkpt["pos"].items()}
 
         kpt_df.loc[im_name] = im_pos
     return kpt_df
@@ -119,6 +120,7 @@ if __name__ == '__main__':
     print(result_dict)
 
     """
+    wrong !
     blouse
     5:  0.06365480014787647
     10: 0.062082154493701754

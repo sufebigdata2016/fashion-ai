@@ -9,7 +9,7 @@ def pred_gen(pred_path, category, need_cols):
     kpt_df = pd.DataFrame(columns=need_cols)
     for k, imkpt in enumerate(data):
         # xianzai pos <= 1
-        im_pos = {col: "%s_%s_1" % (int(pos[0][0]), int(pos[0][1])) if len(pos) > 0 else "0_0_0" for col, pos in
+        im_pos = {col: "%s_%s_1" % (round(pos[0][0]), round(pos[0][1])) if len(pos) > 0 else "0_0_0" for col, pos in
                   imkpt["pos"].items()}
         im_pos["image_category"] = category
         im_pos["image_id"] = re.sub("^.*(?=Image)", "", imkpt["id"])
@@ -47,4 +47,4 @@ if len(cdf) != len(test):
 pred_file = f"{HOME_PATH}/pred/my_prof.csv"
 cdf = pd.merge(test, cdf, on=list(test.columns), how="inner")[all_cols]
 cdf = cdf.fillna("-1_-1_-1")
-cdf.to_csv(pred_file, index=False)
+cdf[all_cols].to_csv(pred_file, index=False)

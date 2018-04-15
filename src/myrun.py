@@ -83,6 +83,10 @@ def im_no_pad(im):
     return im[10:-10, 10:-10, :]
 
 
+def pt_no_pad(pt):
+    return pt[0] - 10, pt[1] - 10
+
+
 # 我再插入一个函数吧，九宫格找keypoint的？这样可以吗, 要pt在边缘 就减不了5啊。还要pad一下？shi zuixiaozhi ma ?
 # 他的黑点是<255,背景白色=没55哦知道了=，但是我看他有些预测的挺好的0.0, 啊，，那就是模型不行哈哈。要该嘛?
 # 蜗居的是不是应该直接预测valid然后看错了哪些，错误绿多少
@@ -94,7 +98,7 @@ def pixel_prob_calc(im, keypoints):
         return keypoints
 
     biggest = 255
-    ps = 15
+    ps = 5
     single_keypoint = []
     for i in keypoints:
         tmp_im = np.pad(cv2.cvtColor(im, cv2.COLOR_RGB2GRAY), [[ps, ps], [ps, ps]], 'symmetric')
@@ -154,6 +158,8 @@ def keypoints_gen(pred_image):
         # 用什么填，最大值，不对，外圈要和背景颜色一眼才行，先试试看
 
         keypoints = detector.detect(im_pad(im))
+        for i, key in enumerate(keypoints):
+            keypoints[i].pt = pt_no_pad(key.pt)
         keypoints_[col] = keypoints
     pred_image["kp_data"] = {"pred": im_pred, "keypoints_": keypoints_}
     return pred_image
@@ -181,15 +187,15 @@ def draw_keypoint(pred_image, save_path):
     fig = plt.figure(figsize=(40, 20))
     for k, (col, kps) in enumerate(pred_image["kp_data"]["keypoints_"].items()):
         fig.add_subplot(4, 8, k * 2 + 1)
-        tmp = cv2.drawKeypoints(im_pad(pred_image["image"]), keypoints_[col], np.array([]), (0, 0, 0),
+        tmp = cv2.drawKeypoints(pred_image["image"], keypoints_[col], np.array([]), (0, 0, 0),
                                 cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-        plt.imshow(cv2.cvtColor(im_no_pad(tmp), cv2.COLOR_BGR2RGB))
+        plt.imshow(cv2.cvtColor(tmp, cv2.COLOR_BGR2RGB))
         plt.title(col + " %s" % len(keypoints_[col]))
 
         fig.add_subplot(4, 8, k * 2 + 2)
-        tmp = cv2.drawKeypoints(im_pad(pred_image["image"]), keypoints__[col], np.array([]), (255, 0, 0),
+        tmp = cv2.drawKeypoints(pred_image["image"], keypoints__[col], np.array([]), (255, 0, 0),
                                 cv2.DRAW_MATCHES_FLAGS_DRAW_RICH_KEYPOINTS)
-        plt.imshow(cv2.cvtColor(im_no_pad(tmp), cv2.COLOR_BGR2RGB))
+        plt.imshow(cv2.cvtColor(tmp, cv2.COLOR_BGR2RGB))
         plt.title(col + " update %s" % len(keypoints__[col]))
 
     fig.savefig(save_path)
@@ -205,34 +211,33 @@ parser.add_argument('--outputdir', type=str, default='[None]', help='output dir'
 parser.add_argument('--coldir', type=str, default='[None]', help='train dir')
 HOME_PATH = "/media/yanpan/7D4CF1590195F939"
 # HOME_PATH = "D:"
-category = 'trousers'
+category = 'blouse'
 # 'blouse', 'dress', 'outwear', 'skirt', 'trousers'
 args = parser.parse_args(
     f"--model {HOME_PATH}/Projects/tf-pose-model/my{category}_prof/tf-pose-1-{category}/graph_freeze.pb "
     "--resolution 368x368 "
     f"--coldir {HOME_PATH}/Projects/fashionai/mytrain/my{category}_prof "  # need col
-    f"--outputdir {HOME_PATH}/Projects/fashionai/pred/my{category}_prof/tf-pose-1-{category}/{category} "
-    # f"--testdir {HOME_PATH}/Projects/fashionai/mytrain/my{category}_prof/val2017".split()
-    f"--testdir {HOME_PATH}/Projects/fashionai/test/Images/{category}".split()
+    f"--outputdir {HOME_PATH}/Projects/fashionai/valid/my{category}_prof/tf-pose-1-{category}/{category} "
+    f"--testdir {HOME_PATH}/Projects/fashionai/mytrain/my{category}_prof/val2017".split()
+    # f"--testdir {HOME_PATH}/Projects/fashionai/test/Images/{category}".split()
 )
 
-image_paths = [args.testdir + "/" + x for x in os.listdir(args.testdir)]
-with open(args.coldir + "/annotations/need_cols.txt", "r", encoding="utf8") as f:
-    need_cols = [x.strip() for x in f.readlines()][2:]
-images = []
-for image_path in image_paths:
-    image_name = re.sub("^.*(?=Images)", "", image_path)
-    image = {}
-    image["image_name"] = image_name
-    image["image"] = read_img(image_path, None, None)
-    image["image_size"] = image["image"].shape[:2]
-    image["need_cols"] = need_cols
-    images.append(image)
-
-# images.json export?
-
-
 if __name__ == '__main1__':
+    image_paths = [args.testdir + "/" + x for x in os.listdir(args.testdir)]
+    with open(args.coldir + "/annotations/need_cols.txt", "r", encoding="utf8") as f:
+        need_cols = [x.strip() for x in f.readlines()][2:]
+    images = []
+    for image_path in image_paths:
+        image_name = re.sub("^.*(?=Images)", "", image_path)
+        image = {}
+        image["image_name"] = image_name
+        image["image"] = read_img(image_path, None, None)
+        image["image_size"] = image["image"].shape[:2]
+        image["need_cols"] = need_cols
+        images.append(image)
+
+    # images.json export?
+
     graph = load_graph(args.model)
     pred_images = graph_pred(graph, images, (368, 368))
     if not os.path.exists(args.outputdir):
@@ -242,7 +247,7 @@ if __name__ == '__main1__':
 
 
 def submit(im_args):
-    k, pred_image = im_args
+    k, pred_image = im_args  # k, pred_image = 0, pred_images[0]
     pred_image_im = keypoints_gen(pred_image)
     # compare_unique: generate pred_image_keypoint_position, single per keypoint
     # pred_image_keypoint_position = compare_unique(pred_image_im)
