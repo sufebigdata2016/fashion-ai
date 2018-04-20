@@ -166,11 +166,13 @@ def keypoints_gen(pred_image):
 
 
 def compare_default(pred_image):
+    # TODO: 预测结果概率矩阵方差很小则没有预测出来，是一个超参，需要调超参
     # 九宫格找keypoint, keyiba, kanyunle, shishikan
     # 添加keypoints__
     # youyixie还是部队，但是已经好很多了，还有什么操作可以提升。规则吗?太麻烦了吧，是很麻烦
     # 要不然我们先训练万，提交了先，之后慢慢改对三。生成
     # 可以对train进行预测，然后选择train预测自己预测错了的，然后用这种方法减少点，去看他的准确率
+
     kd = {}
     for col, im in pred_image["kp_data"]["pred"].items():
         keypoints = pred_image["kp_data"]["keypoints_"][col]
@@ -211,15 +213,15 @@ parser.add_argument('--outputdir', type=str, default='[None]', help='output dir'
 parser.add_argument('--coldir', type=str, default='[None]', help='train dir')
 HOME_PATH = "/media/yanpan/7D4CF1590195F939"
 # HOME_PATH = "D:"
-category = 'blouse'
+category = 'outwear'
 # 'blouse', 'dress', 'outwear', 'skirt', 'trousers'
 args = parser.parse_args(
     f"--model {HOME_PATH}/Projects/tf-pose-model/my{category}_prof/tf-pose-1-{category}/graph_freeze.pb "
     "--resolution 368x368 "
     f"--coldir {HOME_PATH}/Projects/fashionai/mytrain/my{category}_prof "  # need col
-    f"--outputdir {HOME_PATH}/Projects/fashionai/valid/my{category}_prof/tf-pose-1-{category}/{category} "
-    f"--testdir {HOME_PATH}/Projects/fashionai/mytrain/my{category}_prof/val2017".split()
-    # f"--testdir {HOME_PATH}/Projects/fashionai/test/Images/{category}".split()
+    f"--outputdir {HOME_PATH}/Projects/fashionai/test2/my{category}_prof/tf-pose-1-{category}/{category} "
+    # f"--testdir {HOME_PATH}/Projects/fashionai/mytrain/my{category}_prof/val2017".split()
+    f"--testdir {HOME_PATH}/Projects/fashionai/test2/Images/{category}".split()
 )
 
 if __name__ == '__main1__':

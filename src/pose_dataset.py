@@ -46,7 +46,6 @@ from taskdesc import TASK_KEY_POINTS
 
 
 class CocoMetadata:
-    # __coco_parts = 57
     # __coco_parts = 19
     # __coco_vecs = list(zip(
     #     [2, 9,  10, 2,  12, 13, 2, 3, 4, 3,  2, 6, 7, 6,  2, 1,  1,  15, 16],
@@ -54,7 +53,8 @@ class CocoMetadata:
     # ))
     __coco_parts = TASK_KEY_POINTS
     parts = range(1, TASK_KEY_POINTS)
-    __coco_vecs = list(zip(parts, parts))
+    __coco_vecs = [(1, 2), (1, 3), (2, 3), (1, 4), (2, 5), (4, 11), (5, 13), (11, 10), (13, 12), (10, 6), (12, 7),
+                   (6, 8), (7, 9), (8, 14), (9, 15), (14, 15)]
 
     @staticmethod
     def parse_float(four_np):

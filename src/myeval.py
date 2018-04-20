@@ -104,11 +104,11 @@ def metric_ne_all(truth_df, pred_df, detail=False):
 
 
 if __name__ == '__main__':
-    category = "blouse"
+    category = "dress"
     # 'blouse', 'dress', 'outwear', 'skirt', 'trousers'
     home_path = "/media/yanpan/7D4CF1590195F939/Projects/fashionai"
     truth_path = f"{home_path}/mytrain/my{category}_prof/annotations/person_keypoints_val2017.json"
-    pred_path = f"{home_path}/valid/my{category}_prof/tf-pose-1-{category}/{category}/pred.json"
+    pred_path = f"{home_path}/valid/my{category}_prof/tf-pose-2-{category}/{category}/pred.json"
     col_path = f"{home_path}/mytrain/my{category}_prof/annotations/need_cols.txt"
     with open(col_path, "r", encoding="utf8") as f:
         need_cols = [x.strip() for x in f.readlines()][2:]
@@ -122,16 +122,16 @@ if __name__ == '__main__':
     """
     wrong !
     blouse
-    5:  0.06365480014787647
-    10: 0.062082154493701754
-    15: 0.0620810531643999
-    20: 0.062159597609104285
-    30: 0.06227255740166314
+    5:  0.03284665363277248       0.03284545224978625
+    10: 
+    15: 0.03278980634911917       0.033033534870904366
+    20: 
+    30: 
     
     dress
-    5:  0.08860700258268969
+    5:  0.08860700258268969      0.04694559976792134
     10: 0.08792957300689651
-    15: 0.08698836921054152
+    15: 0.08698836921054152      0.047236180801040466
     20: 0.08694636300859725
     25: 0.08675139580577107
     30: 0.08612128586206062

@@ -9,6 +9,8 @@ if __name__ == '__main__':
     with open("taskdesc.py", "w", encoding="utf8") as f:
         f.writelines("TASK_KEY_POINTS = %s" % args.keypoints)
 
+    # 14, 16, 15, 5, 8
+
 if __name__ == "__test__":
 
     # t, q = sess.run([tf.concat(l1, axis=0), q_vect_split[0]])

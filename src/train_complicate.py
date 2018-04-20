@@ -72,8 +72,9 @@ if __name__ == '__main__':
                              f"--imgpath {home_path}/fashionai/mytrain/my{category}_prof/ "
                              f"--sample_path {home_path}/fashionai/mytrain/my{category}_prof/val2017 "
                              "--batchsize 32 --lr 0.0001 "
-                             f"--modelpath {home_path}/tf-pose-model/my{category}_prof/tf-pose-2.1-{category}/ "
-                             f"--logpath {home_path}/tf-pose-model/my{category}_prof/tf-pose-2.1-{category}/"
+                             f"--checkpoint {home_path}/tf-pose-model/my{category}_prof/tf-pose-3-{category}/cmu_batch:32_lr:0.0001_gpus:1_368x368_ "
+                             f"--modelpath {home_path}/tf-pose-model/my{category}_prof/tf-pose-3-{category}/ "
+                             f"--logpath {home_path}/tf-pose-model/my{category}_prof/tf-pose-3-{category}/"
                              "".split())
 
     # "--checkpoint {home_path}/tf-pose-model/my{category}_prof/tf-pose-1-blouse/cmu_batch:32_lr:0.0001_gpus:1_368x368_"
@@ -85,14 +86,16 @@ if __name__ == '__main__':
 
     logger.info('define model+')
     input_node = tf.placeholder(tf.float32, shape=(args.batchsize, args.inputheight, args.inputwidth, 3), name='image')
+    vectmap_node = tf.placeholder(tf.float32, shape=(args.batchsize, output_h, output_w, KP * 2), name='vectmap')
     heatmap_node = tf.placeholder(tf.float32, shape=(args.batchsize, output_h, output_w, KP), name='heatmap')
-    # prepare data
-    df = get_dataflow_batch(args.datapath, True, args.batchsize, img_path=args.imgpath, if_filp=False)
-    enqueuer = DataFlowToQueue(df, [input_node, heatmap_node], queue_size=100)
-    q_inp, q_heat = enqueuer.dequeue()
 
-    df_valid = get_dataflow_batch(args.datapath, False, args.batchsize, img_path=args.imgpath, if_filp=False,
-                                  buffer_size=500)  # TODO: auto dectect buffer_size
+    # prepare data
+    df = get_dataflow_batch(args.datapath, True, args.batchsize, img_path=args.imgpath, if_filp=True)
+    enqueuer = DataFlowToQueue(df, [input_node, heatmap_node, vectmap_node], queue_size=100)
+    q_inp, q_heat, q_vect = enqueuer.dequeue()
+
+    df_valid = get_dataflow_batch(args.datapath, False, args.batchsize, img_path=args.imgpath, buffer_size=500)
+    # TODO: auto dectect buffer_size
     df_valid.reset_state()
     validation_cache = []
 
@@ -100,58 +103,75 @@ if __name__ == '__main__':
     logger.info('tensorboard val image: %d' % len(val_image))
     logger.info(q_inp)
     logger.info(q_heat)
+    logger.info(q_vect)
 
+    output_vectmap = []
     output_heatmap = []
+    losses = []
+    last_losses_l1 = []
     last_losses_l2 = []
     outputs = []
     with tf.variable_scope(tf.get_variable_scope(), reuse=False):
         net, pretrain_path, last_layer = get_network(args.model, q_inp)
 
-        heat = net.loss_last()
+        vect, heat = net.loss_last()
+        output_vectmap.append(vect)
         output_heatmap.append(heat)
         outputs.append(net.get_output())
 
-        l2s = net.loss_l1_l2()
-        for idx, l2 in enumerate(l2s[:-1]):
+        l1s, l2s = net.loss_l1_l2()
+        for idx, (l1, l2) in enumerate(zip(l1s, l2s)):
+            loss_l1 = tf.nn.l2_loss(tf.concat(l1, axis=0) - q_vect, name='loss_l1_stage%d_tower%d' % (idx, 0))
             loss_l2 = tf.nn.l2_loss(tf.concat(l2, axis=0) - q_heat, name='loss_l2_stage%d_tower%d' % (idx, 0))
-        # change loss, get rid of last channel
-        loss_l2 = tf.nn.l2_loss(tf.concat(l2s[-1], axis=0)[:, :, :, :-1] - q_heat[:, :, :, :-1],
-                                name='loss_l2_stage%d_tower%d' % (len(l2s) - 1, 0))
+            losses.append(tf.reduce_mean([loss_l1, loss_l2]))
+
+        last_losses_l1.append(loss_l1)
         last_losses_l2.append(loss_l2)
 
     outputs = tf.concat(outputs, axis=0)
 
     with tf.device(tf.DeviceSpec(device_type="GPU", device_index=0)):
         # define loss
+        total_loss = tf.reduce_sum(losses) / args.batchsize
+        total_loss_ll_paf = tf.reduce_sum(last_losses_l1) / args.batchsize
         total_loss_ll_heat = tf.reduce_sum(last_losses_l2) / args.batchsize
+        total_loss_ll = tf.reduce_mean([total_loss_ll_paf, total_loss_ll_heat])
 
         # define optimizer
         step_per_epoch = 121745 // args.batchsize
         global_step = tf.Variable(0, trainable=False)
         starter_learning_rate = float(args.lr)
         learning_rate = tf.train.exponential_decay(starter_learning_rate, global_step, decay_steps=5000, decay_rate=0.5,
-                                                   staircase=True)  # TODO: why staircase is True??
+                                                   staircase=True)
         # decay_steps=10000, decay_rate=0.33, staircase=True)
 
+    # optimizer = tf.train.RMSPropOptimizer(learning_rate, decay=0.0005, momentum=0.9, epsilon=1e-10)
     optimizer = tf.train.AdamOptimizer(learning_rate, epsilon=1e-8)
     update_ops = tf.get_collection(tf.GraphKeys.UPDATE_OPS)
     with tf.control_dependencies(update_ops):
-        train_op = optimizer.minimize(total_loss_ll_heat, global_step, colocate_gradients_with_ops=True)
+        train_op = optimizer.minimize(total_loss, global_step, colocate_gradients_with_ops=True)
     logger.info('define model-')
 
     # define summary
+    tf.summary.scalar("loss", total_loss)
+    tf.summary.scalar("loss_lastlayer", total_loss_ll)
+    tf.summary.scalar("loss_lastlayer_paf", total_loss_ll_paf)
     tf.summary.scalar("loss_lastlayer_heat", total_loss_ll_heat)
     tf.summary.scalar("queue_size", enqueuer.size())
     tf.summary.scalar("learning_rate", optimizer._lr)
     merged_summary_op = tf.summary.merge_all()
 
+    valid_loss = tf.placeholder(tf.float32, shape=[])
+    valid_loss_ll = tf.placeholder(tf.float32, shape=[])
+    valid_loss_ll_paf = tf.placeholder(tf.float32, shape=[])
     valid_loss_ll_heat = tf.placeholder(tf.float32, shape=[])
     sample_train = tf.placeholder(tf.float32, shape=(4, 640, 640, 3))
     sample_valid = tf.placeholder(tf.float32, shape=(12, 640, 640, 3))
-    train_img = tf.summary.image('training_sample', sample_train, 4)
-    valid_img = tf.summary.image('validation_sample', sample_valid, 12)
-    valid_loss_ll_t = tf.summary.scalar("loss_valid_ll_heat", valid_loss_ll_heat)
-    merged_validate_op = tf.summary.merge([train_img, valid_img, valid_loss_ll_t])
+    train_img = tf.summary.image('training sample', sample_train, 4)
+    valid_img = tf.summary.image('validation sample', sample_valid, 12)
+    valid_loss_t = tf.summary.scalar("loss_valid", valid_loss)
+    valid_loss_ll_t = tf.summary.scalar("loss_valid_lastlayer", valid_loss_ll)
+    merged_validate_op = tf.summary.merge([train_img, valid_img, valid_loss_t, valid_loss_ll_t])
 
     saver = tf.train.Saver(max_to_keep=100)
     config = tf.ConfigProto(allow_soft_placement=True, log_device_placement=False)
@@ -186,7 +206,6 @@ if __name__ == '__main__':
         last_gs_num = last_gs_num2 = 0
         initial_gs_num = sess.run(global_step)
 
-        # epoch plot ...
         while True:
             _, gs_num = sess.run([train_op, global_step])
 
@@ -194,14 +213,16 @@ if __name__ == '__main__':
                 break
 
             if gs_num - last_gs_num >= 100:
-                l2s_numpy, train_loss_ll_heat, lr_val, summary, queue_size = sess.run(
-                    [l2s, total_loss_ll_heat, learning_rate, merged_summary_op, enqueuer.size()])
+                train_loss, train_loss_ll, train_loss_ll_paf, train_loss_ll_heat, lr_val, summary, queue_size = sess.run(
+                    [total_loss, total_loss_ll, total_loss_ll_paf, total_loss_ll_heat, learning_rate, merged_summary_op,
+                     enqueuer.size()])
 
                 # log of training loss / accuracy
                 batch_per_sec = (gs_num - initial_gs_num) / (time.time() - time_started)
-                logger.info('epoch=%.2f step=%d, %0.4f examples/sec lr=%f, loss_ll_heat=%g, q=%d' % (
-                    gs_num / step_per_epoch, gs_num, batch_per_sec * args.batchsize, lr_val, train_loss_ll_heat,
-                    queue_size))
+                logger.info(
+                    'epoch=%.2f step=%d, %0.4f examples/sec lr=%f, loss=%g, loss_ll=%g, loss_ll_paf=%g, loss_ll_heat=%g, q=%d' % (
+                        gs_num / step_per_epoch, gs_num, batch_per_sec * args.batchsize, lr_val, train_loss,
+                        train_loss_ll, train_loss_ll_paf, train_loss_ll_heat, queue_size))
                 last_gs_num = gs_num
 
                 file_writer.add_summary(summary, gs_num)
@@ -210,30 +231,40 @@ if __name__ == '__main__':
                 # save weights
                 saver.save(sess, os.path.join(args.modelpath, training_name, 'model'), global_step=global_step)
 
-                average_loss_ll_heat = 0
+                average_loss = average_loss_ll = average_loss_ll_paf = average_loss_ll_heat = 0
                 total_cnt = 0
 
                 if len(validation_cache) == 0:
                     for images_test, heatmaps, vectmaps in tqdm(df_valid.get_data()):
-                        validation_cache.append((images_test, heatmaps))
+                        validation_cache.append((images_test, heatmaps, vectmaps))
                     df_valid.reset_state()
                     del df_valid
                     df_valid = None
 
                 # log of test accuracy
-                for images_test, heatmaps in validation_cache:
-                    lss_ll_heat = sess.run(total_loss_ll_heat, feed_dict={q_inp: images_test, q_heat: heatmaps})
+                for images_test, heatmaps, vectmaps in validation_cache:
+                    lss, lss_ll, lss_ll_paf, lss_ll_heat, vectmap_sample, heatmap_sample = sess.run(
+                        [total_loss, total_loss_ll, total_loss_ll_paf, total_loss_ll_heat, output_vectmap,
+                         output_heatmap],
+                        feed_dict={q_inp: images_test, q_vect: vectmaps, q_heat: heatmaps}
+                    )
+                    average_loss += lss * len(images_test)
+                    average_loss_ll += lss_ll * len(images_test)
+                    average_loss_ll_paf += lss_ll_paf * len(images_test)
                     average_loss_ll_heat += lss_ll_heat * len(images_test)
                     total_cnt += len(images_test)
 
-                logger.info('validation(%d) %s , loss_ll_heat=%f' % (
-                    total_cnt, training_name, average_loss_ll_heat / total_cnt))
+                logger.info('validation(%d) %s loss=%f, loss_ll=%f, loss_ll_paf=%f, loss_ll_heat=%f' % (
+                    total_cnt, training_name, average_loss / total_cnt, average_loss_ll / total_cnt,
+                    average_loss_ll_paf / total_cnt, average_loss_ll_heat / total_cnt))
                 last_gs_num2 = gs_num
 
                 sample_image = [enqueuer.last_dp[0][i] for i in range(4)]
-                outputMat = sess.run(outputs,
-                                     feed_dict={q_inp: np.array((sample_image + val_image) * (args.batchsize // 16))})
-                pafMat, heatMat = outputMat[:, :, :, :], outputMat[:, :, :, :]  # pafMat,heatMat useless
+                outputMat = sess.run(
+                    outputs,
+                    feed_dict={q_inp: np.array((sample_image + val_image) * (args.batchsize // 16))}
+                )
+                pafMat, heatMat = outputMat[:, :, :, KP:], outputMat[:, :, :, :KP]
 
                 sample_results = []
                 for i in range(len(sample_image)):
@@ -252,6 +283,9 @@ if __name__ == '__main__':
 
                 # save summary
                 summary = sess.run(merged_validate_op, feed_dict={
+                    valid_loss: average_loss / total_cnt,
+                    valid_loss_ll: average_loss_ll / total_cnt,
+                    valid_loss_ll_paf: average_loss_ll_paf / total_cnt,
                     valid_loss_ll_heat: average_loss_ll_heat / total_cnt,
                     sample_valid: test_results,
                     sample_train: sample_results
