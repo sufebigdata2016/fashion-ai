@@ -1,0 +1,483 @@
+more than 1 points!     4 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/0100fc1fb2272a6d7006013f944e3a64.jpg {'center_front': 8, 'cuff_left_in': 6, 'cuff_left_out': 3}
+more than 1 points!     6 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/0112e937ce1605432ebb74303ffe3603.jpg {'cuff_right_out': 3}
+more than 1 points!    13 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/01c2b24856f11ca9113fe8779254abb0.jpg {'cuff_left_in': 9, 'cuff_left_out': 6, 'cuff_right_in': 4, 'cuff_right_out': 3}
+more than 1 points!    17 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/0210108fa2fc6fa90b7ad97fc9288591.jpg {'cuff_left_in': 7, 'cuff_left_out': 6, 'cuff_right_out': 2}
+more than 1 points!    18 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/53b150ec8c4adab64c5010744758d28c.jpg {'cuff_left_in': 3, 'cuff_left_out': 3}
+more than 1 points!    19 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/53d65303d28660831c6b450e65e7517b.jpg {'cuff_left_out': 2}
+more than 1 points!    22 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/541e98074f8ac7dd1c15cd2c6711b1b5.jpg {'cuff_left_in': 3}
+more than 1 points!    33 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/55eb8545dab51d084c474f99c87a6156.jpg {'cuff_right_in': 4, 'cuff_right_out': 7}
+more than 1 points!    36 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/8c8834f71617b0673be0217f51df4620.jpg {'cuff_left_in': 3, 'cuff_left_out': 3}
+more than 1 points!    37 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/8cc4add07d200b26ea3f522771255ec1.jpg {'cuff_left_in': 10, 'cuff_left_out': 6, 'cuff_right_in': 3, 'cuff_right_out': 7}
+more than 1 points!    38 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/8cd84df9244fb9d25b85849280acab7e.jpg {'top_hem_right': 3}
+more than 1 points!    40 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/8d0b43b132abc4b250d0bea39b5df800.jpg {'shoulder_right': 3, 'cuff_left_in': 3}
+more than 1 points!    42 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/8d47a4300680a7fa2c069281287bd12e.jpg {'center_front': 2}
+more than 1 points!    43 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/8d577c6d3f61d0c2148394098c3b7071.jpg {'cuff_left_in': 3, 'cuff_left_out': 4}
+more than 1 points!    50 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/29d01df063b8cfe456e6dca16efd19c1.jpg {'cuff_left_in': 5, 'cuff_left_out': 14}
+more than 1 points!    59 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/2ae022bb21e19ccf0aa57ee223a4043c.jpg {'cuff_right_in': 8, 'cuff_right_out': 10}
+more than 1 points!    60 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/2af01eb7f3f9335a7814bd29d540c5c1.jpg {'shoulder_left': 3}
+more than 1 points!    61 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/2b066738824b34a1bb874c45ed7aa6bb.jpg {'cuff_left_in': 3, 'cuff_left_out': 4}
+more than 1 points!    62 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/2b458a162b1051d15289e0ccf56dd128.jpg {'cuff_right_in': 5, 'cuff_right_out': 3}
+more than 1 points!    67 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/cde1acad2a12681f72d9fb81159cfd88.jpg {'shoulder_right': 4, 'cuff_left_in': 5, 'cuff_left_out': 9, 'cuff_right_in': 2, 'cuff_right_out': 2}
+more than 1 points!    68 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/cdeacc694cac45d183e4e2869acb9d9c.jpg {'cuff_left_in': 5, 'cuff_left_out': 9}
+more than 1 points!    88 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/a8831d957fec9088642023718c0337f5.jpg {'cuff_right_in': 4}
+more than 1 points!    89 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/a88f9f20f8808acb71097869d136971c.jpg {'cuff_right_in': 5, 'cuff_right_out': 9, 'top_hem_left': 4}
+more than 1 points!    96 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/a99c25bd5a3c36eac2ae4388f7109cc0.jpg {'cuff_left_out': 6}
+more than 1 points!    97 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/a9f0d7ec3514ee020168b9e71a6ab6cd.jpg {'cuff_left_in': 8, 'cuff_left_out': 10, 'cuff_right_in': 10, 'cuff_right_out': 12}
+more than 1 points!    99 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/aa1c69aa09135a77c06a42d985389e5d.jpg {'cuff_left_in': 3, 'cuff_left_out': 6}
+more than 1 points!   107 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/aacaf8ba1a391e4e1ddc181038ca09ef.jpg {'cuff_left_in': 14, 'cuff_left_out': 9}
+more than 1 points!   109 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/aad94e3fc60d123fae85bf1a8b4a2f04.jpg {'cuff_left_out': 10}
+more than 1 points!   114 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/07eb5a161108f0f2222c2e9720486218.jpg {'shoulder_left': 8, 'shoulder_right': 6}
+more than 1 points!   117 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/10311cf56ee67f90692001fcebb66e7c.jpg {'cuff_right_in': 4, 'cuff_right_out': 3}
+more than 1 points!   126 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/27400f4c12db01bd8065359dd5896fd7.jpg {'cuff_left_in': 9, 'cuff_left_out': 11}
+more than 1 points!   129 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/2def460c7b01c0fa84a346af03cfa4f8.jpg {'cuff_left_in': 6, 'cuff_left_out': 7, 'cuff_right_out': 2}
+more than 1 points!   130 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/30460bdb0d409001aae3168f849d4d5f.jpg {'top_hem_left': 9, 'top_hem_right': 4}
+more than 1 points!   138 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6e5b8e3e25f053b58a129bbf8821afde.jpg {'cuff_left_in': 3}
+more than 1 points!   140 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6eadb1b9e897b5c28ec8bb5df82a0777.jpg {'cuff_left_out': 5}
+more than 1 points!   141 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6eeed7cf668b6e7b27b23128d5663108.jpg {'shoulder_right': 3}
+more than 1 points!   145 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6f2e33833ffe7086f53b42b34a23c646.jpg {'shoulder_right': 3}
+more than 1 points!   146 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e474852b7b2491a2f7c713861ea05ece.jpg {'cuff_left_in': 2, 'cuff_right_in': 4, 'cuff_right_out': 3}
+more than 1 points!   148 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e48803c3609ce3b0574df2cfcc322415.jpg {'cuff_right_in': 7, 'cuff_right_out': 10}
+more than 1 points!   150 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e4ac80eee40e5ebc4c78ce95ca125802.jpg {'top_hem_left': 2, 'top_hem_right': 5}
+more than 1 points!   152 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e502bec0d3e27e690c79b780481c3cf3.jpg {'cuff_left_out': 4, 'cuff_right_out': 2}
+more than 1 points!   153 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e51b28bdf46f6d36339f3f8714ba8e8f.jpg {'cuff_left_in': 13, 'cuff_left_out': 5}
+more than 1 points!   155 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e52e65a2fa9640521ac1a6d2bc546118.jpg {'cuff_right_in': 3, 'cuff_right_out': 7}
+more than 1 points!   156 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e561df4676d3018a7504381e9e1bbd46.jpg {'cuff_left_out': 3}
+more than 1 points!   158 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e5f543dd2266a0860f23a44c984f385d.jpg {'cuff_right_out': 3}
+more than 1 points!   168 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/0db82d03f64e3663def6782e600e28c8.jpg {'shoulder_right': 3}
+more than 1 points!   174 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/0e97d69231ed8695961567cdd08543c9.jpg {'cuff_left_out': 2, 'cuff_right_out': 3}
+more than 1 points!   175 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/0ea165423df1450d1afb77b7df3118c6.jpg {'shoulder_right': 6}
+more than 1 points!   177 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/0ee0d954961f8afb390644ceccf4dc67.jpg {'shoulder_left': 6, 'shoulder_right': 2, 'cuff_left_in': 2, 'cuff_left_out': 7, 'cuff_right_in': 7, 'cuff_right_out': 2}
+more than 1 points!   188 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/102cf6339f9db0da77521ca2d04d50d9.jpg {'cuff_left_in': 2, 'cuff_left_out': 2, 'cuff_right_in': 3, 'cuff_right_out': 3}
+more than 1 points!   189 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3beb64f01d89abe3ed3d3d735d6bf056.jpg {'cuff_left_in': 4, 'cuff_left_out': 6, 'cuff_right_in': 2, 'cuff_right_out': 2}
+more than 1 points!   191 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3c2288c949b807a4174e811427b7937a.jpg {'shoulder_right': 3, 'cuff_left_in': 9, 'top_hem_right': 4}
+more than 1 points!   193 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3c4b04b66af6c404eb868ac6a4154660.jpg {'cuff_left_out': 2}
+more than 1 points!   195 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3c8dd132cb81a01d84b0acf0a717a7bc.jpg {'cuff_left_out': 3}
+more than 1 points!   197 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3caa328366632f15c7e76101627fe70d.jpg {'cuff_right_in': 5, 'cuff_right_out': 8}
+more than 1 points!   200 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3cda6f62b359f3e7bd0c38c8b0bc5ac8.jpg {'center_front': 2}
+more than 1 points!   201 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3cff1f7ac736311a443f06a6c37893de.jpg {'cuff_right_in': 5, 'cuff_right_out': 3}
+more than 1 points!   202 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3d11de8d8a23022cd8118aeb315eb1ac.jpg {'cuff_left_in': 3, 'cuff_right_in': 2}
+more than 1 points!   205 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/7bf79505500ef80d1f934edaa058fdfa.jpg {'armpit_right': 3, 'cuff_right_out': 3}
+more than 1 points!   213 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/7cf370cce1dcd842779e4e390b52f08d.jpg {'cuff_left_out': 3, 'cuff_right_out': 2}
+more than 1 points!   215 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/7d056e6af99cfef7766e1849bdef8265.jpg {'cuff_left_in': 2, 'cuff_left_out': 2, 'cuff_right_in': 12, 'cuff_right_out': 8}
+more than 1 points!   221 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/7dbcdfb56ae5f6565f6d080701c75330.jpg {'top_hem_right': 3}
+more than 1 points!   226 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/7f0fab74ee3327dc757789c754f3bae3.jpg {'armpit_left': 3, 'cuff_left_out': 4}
+more than 1 points!   227 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/7f390930098647002c823186bc04148c.jpg {'cuff_left_in': 7, 'cuff_left_out': 7}
+more than 1 points!   228 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/b7216a55dee1609e2f4213666eb37c08.jpg {'top_hem_left': 4, 'top_hem_right': 3}
+more than 1 points!   230 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/b72d1171677313ed8d88296d353ab4a9.jpg {'cuff_left_out': 3}
+more than 1 points!   233 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/b751db20c19c805884fffe860597f357.jpg {'cuff_left_in': 8, 'cuff_left_out': 4, 'cuff_right_in': 3}
+more than 1 points!   244 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/b8c2cfe293f6b53bf13283053f46dd33.jpg {'cuff_left_in': 13, 'cuff_left_out': 8, 'cuff_right_in': 17, 'cuff_right_out': 3}
+more than 1 points!   245 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/b8ccd8e5aa0510d795ff8dc9c02e1cd5.jpg {'cuff_right_in': 3, 'top_hem_left': 3}
+more than 1 points!   252 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/98eb202c8c09da6b3bcd011ee636f39d.jpg {'cuff_left_in': 7, 'cuff_left_out': 8, 'cuff_right_in': 9, 'cuff_right_out': 7}
+more than 1 points!   255 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/98fc671ae80b848129b836edeffc381b.jpg {'cuff_left_in': 4, 'cuff_left_out': 6, 'cuff_right_in': 7, 'cuff_right_out': 4}
+more than 1 points!   258 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9964c9d165483b31a634de26ac2f71b8.jpg {'cuff_left_out': 4}
+more than 1 points!   265 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9a3403727329fddc5757deafab44e2d6.jpg {'center_front': 2}
+more than 1 points!   266 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9a3ca705dd436d76fc6d020ca9532a5e.jpg {'cuff_right_out': 2, 'top_hem_right': 3}
+more than 1 points!   275 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/171765f7365b13882dd59642a6e60630.jpg {'cuff_left_in': 4, 'cuff_right_in': 4, 'cuff_right_out': 4}
+more than 1 points!   279 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/1771086b02dc7139a1075d063be1a850.jpg {'top_hem_right': 7}
+more than 1 points!   289 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/1909f469cfd4d1ea790ec8a93b9c24dc.jpg {'center_front': 5, 'shoulder_left': 2, 'shoulder_right': 5, 'armpit_right': 6}
+more than 1 points!   300 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/64cd3603cd6d29eab0438304e2a9601d.jpg {'cuff_left_out': 5}
+more than 1 points!   305 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/659e45d82e8a5f66d0360b940f240d4f.jpg {'shoulder_left': 2, 'shoulder_right': 3, 'cuff_left_in': 3}
+more than 1 points!   313 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/664f751e474b0a15f20f7a7b7f23493e.jpg {'cuff_right_in': 5}
+more than 1 points!   324 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f0fe78e2bca9236b2f7e29edb2debd65.jpg {'neckline_left': 4, 'neckline_right': 3, 'center_front': 2, 'armpit_left': 4, 'armpit_right': 2, 'cuff_right_out': 3}
+more than 1 points!   326 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f139079b06703427939da507029f85c4.jpg {'neckline_left': 6, 'neckline_right': 6, 'shoulder_left': 4, 'shoulder_right': 7}
+more than 1 points!   328 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f15aaf730399aa310684f705c82cb292.jpg {'cuff_left_out': 5}
+more than 1 points!   330 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f1c2e75400632c9380ef9f3fb0950f4d.jpg {'cuff_left_in': 4, 'cuff_left_out': 8}
+more than 1 points!   331 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f1cdc5bbe8f21468c7488eaaa9c3bb24.jpg {'top_hem_left': 11}
+more than 1 points!   333 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f2b33fe64bcd98aa2a17a509f4da2dd0.jpg {'cuff_left_in': 5, 'cuff_right_in': 5}
+more than 1 points!   336 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f2ebff82299bdeccd68976d2fd34f264.jpg {'cuff_left_in': 9, 'cuff_left_out': 5, 'cuff_right_out': 3}
+more than 1 points!   346 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/dbcf2ff15ed757d33480ebf3aff88157.jpg {'cuff_left_out': 6, 'cuff_right_out': 2}
+more than 1 points!   352 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/dc75c74342aabaeb645195e63cdc67fd.jpg {'cuff_right_in': 3, 'cuff_right_out': 8}
+more than 1 points!   354 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/dcc3b16c8a9ce7ca875d73bb33415faf.jpg {'top_hem_left': 7}
+more than 1 points!   357 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/dd47e0436b76b194d96ae54b78508691.jpg {'cuff_left_in': 7, 'cuff_left_out': 8, 'cuff_right_out': 2}
+more than 1 points!   358 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/0551062ca34a82d53996c1bd45cd9e59.jpg {'cuff_right_in': 10}
+more than 1 points!   359 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/055867ea196f83e7f170c507ee84ed7c.jpg {'cuff_left_in': 5, 'cuff_left_out': 7, 'cuff_right_in': 5, 'cuff_right_out': 6}
+more than 1 points!   360 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/056bebbc8bbb90c2e8d59568e8afecd4.jpg {'cuff_left_in': 8, 'cuff_left_out': 7, 'cuff_right_out': 5, 'top_hem_left': 10}
+more than 1 points!   377 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/83928c0ab424ba05490f0cb92df642ad.jpg {'cuff_left_in': 5}
+more than 1 points!   383 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/849e115ac97107e331f9eed7c79c0b7e.jpg {'shoulder_left': 4, 'cuff_right_in': 7, 'cuff_right_out': 4, 'top_hem_right': 12}
+more than 1 points!   389 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/855d22f41bcdbed56ffbc5b811ffcffe.jpg {'top_hem_left': 7}
+more than 1 points!   390 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/bcdcf790cb8b261a92b4985959e1f133.jpg {'cuff_right_in': 3}
+more than 1 points!   392 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/bd2071c2c9e01eedbc24c3abfdaca35c.jpg {'cuff_right_in': 3}
+more than 1 points!   398 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/be614af8f79a9dd65cca15eaf9e9a26e.jpg {'cuff_left_in': 3, 'cuff_right_in': 5, 'cuff_right_out': 3}
+more than 1 points!   403 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/bf6f680331e63db5260657b2fc830fa1.jpg {'cuff_right_in': 7, 'cuff_right_out': 14}
+more than 1 points!   404 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/456993d816b6c90bc8fb68c045f03d53.jpg {'cuff_left_in': 3, 'cuff_left_out': 17}
+more than 1 points!   408 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/45f88a655d8cd40710cf7c8159a108e9.jpg {'cuff_right_in': 4, 'cuff_right_out': 6}
+more than 1 points!   409 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/4623bfa718551c8aec615a96b34b2a8b.jpg {'cuff_left_in': 5, 'cuff_left_out': 8, 'cuff_right_in': 7, 'cuff_right_out': 4}
+more than 1 points!   411 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/466880052cbc10664e88f998a36d7289.jpg {'cuff_right_out': 5}
+more than 1 points!   416 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/46f4c7349724b77cd054874e171c3292.jpg {'cuff_left_in': 3, 'cuff_left_out': 10}
+more than 1 points!   417 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/473394d123af886b8e66557a57bade20.jpg {'cuff_right_out': 6}
+more than 1 points!   418 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/473532e994410dd78d6f749531ecdf08.jpg {'cuff_left_in': 4}
+more than 1 points!   420 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/47b7fee0244256e906c3599f2c2e7d1f.jpg {'cuff_right_in': 5, 'cuff_right_out': 4}
+more than 1 points!   421 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/47e7d9a1a38c8a34b2bea2ba9357c45e.jpg {'cuff_left_in': 4, 'cuff_left_out': 5}
+more than 1 points!   428 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/73c7aa37158abdaa2fb730401c5adcae.jpg {'cuff_left_in': 7, 'cuff_left_out': 5}
+more than 1 points!   431 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/74368a1e7d2b1c46865e251c60fa46b1.jpg {'cuff_left_out': 3, 'cuff_right_out': 3}
+more than 1 points!   432 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/74da957248960497fffe68d3d4141743.jpg {'shoulder_left': 7, 'cuff_left_in': 3, 'cuff_left_out': 6}
+more than 1 points!   435 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/75083cb128857ae1cf4a576d212fb0cb.jpg {'cuff_left_out': 3}
+more than 1 points!   437 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/7531e46e6e983b8d9fcb8995470b5748.jpg {'cuff_left_in': 4, 'cuff_left_out': 4, 'cuff_right_in': 10, 'cuff_right_out': 7}
+more than 1 points!   439 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/755c9eac5e0de8657bc47bcde9d2d2de.jpg {'cuff_right_out': 3}
+more than 1 points!   441 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/75f1e339b919a879722b74fea949455b.jpg {'top_hem_left': 3}
+more than 1 points!   442 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/761fbd9524a183d553a56b041e2c63c4.jpg {'cuff_right_out': 4}
+more than 1 points!   443 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/7630bd8d25b6332ffa6820f96b3ad5e2.jpg {'top_hem_left': 3}
+more than 1 points!   444 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/7631627620a64c0300493b5f370f2c03.jpg {'cuff_right_in': 7, 'cuff_right_out': 8}
+more than 1 points!   451 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/32c5e76c82276a9bc34e048e2b70fe87.jpg {'top_hem_left': 2, 'top_hem_right': 9}
+more than 1 points!   453 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3319b4318a1f2c8aff614883856ebefb.jpg {'cuff_right_in': 4}
+more than 1 points!   454 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/335371983859ead8428e6f3a06d1b0c2.jpg {'cuff_left_out': 5, 'cuff_right_in': 5, 'cuff_right_out': 4}
+more than 1 points!   458 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/341209c5573f496103b2f36d087825dd.jpg {'cuff_left_in': 4, 'cuff_left_out': 4, 'cuff_right_in': 2}
+more than 1 points!   475 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/5b9d2a394db6f227bf7f6464e44b1326.jpg {'cuff_left_in': 6, 'cuff_left_out': 6}
+more than 1 points!   478 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/5c130a9bce1af84aa8d8c4a4b9902e9b.jpg {'cuff_right_in': 4}
+more than 1 points!   480 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/5c411c04e9c1404876a3d64532817ee6.jpg {'shoulder_left': 8}
+more than 1 points!   483 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/5cd63ae6e6e2e919fc2cca9c2a65672d.jpg {'cuff_right_in': 4, 'cuff_right_out': 3}
+more than 1 points!   494 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9f344475e4af8d478ec3e822e51675e2.jpg {'cuff_left_in': 3}
+more than 1 points!   496 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9fba5615dbce73a701bff822cf6bd5df.jpg {'cuff_left_out': 3}
+more than 1 points!   497 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9fcfd2faf833f740b02f0b401ce1db0b.jpg {'cuff_left_out': 3}
+more than 1 points!   501 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/a0521a6947ed1c9fcb50d84e47c43edc.jpg {'cuff_left_in': 4, 'cuff_left_out': 5}
+more than 1 points!   505 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/776354aa509db9fb967ad9ec52fcd912.jpg {'cuff_left_in': 5, 'cuff_left_out': 4, 'cuff_right_in': 2}
+more than 1 points!   506 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/795404b1d19bf414119c31698c969797.jpg {'cuff_left_out': 5}
+more than 1 points!   507 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/7bed9884c309d8aa3956f01d47aad405.jpg {'cuff_left_in': 5, 'cuff_left_out': 6, 'top_hem_left': 5}
+more than 1 points!   508 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/7f9a378f61e0e491a927ce77c13d8378.jpg {'cuff_right_in': 9}
+more than 1 points!   510 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/856ff2e64aa45153d8e73ee5e0cfd30e.jpg {'cuff_right_in': 4}
+more than 1 points!   516 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9160f6b5c0272a253be07c404e601c40.jpg {'cuff_right_out': 8}
+more than 1 points!   517 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/94436f96634cd00ddf943e2824ccc8c0.jpg {'cuff_right_in': 4, 'cuff_right_out': 4}
+more than 1 points!   526 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/af3ac4f51e7759cab0ac4c5bf53626c5.jpg {'top_hem_right': 3}
+more than 1 points!   529 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/af7e21a7a4f43f9f62e3e8c44deac274.jpg {'shoulder_left': 4, 'armpit_left': 5, 'cuff_left_in': 6, 'cuff_left_out': 4}
+more than 1 points!   531 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/b0bf21e7026b67dbf7e4e4f1cd61781a.jpg {'cuff_left_in': 2, 'cuff_right_in': 3}
+more than 1 points!   537 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/21676211983ab2c65256e953f431f737.jpg {'cuff_left_in': 3}
+more than 1 points!   541 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/2270316e20267c93967adcab91a06244.jpg {'cuff_left_in': 5}
+more than 1 points!   546 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/22f557eb32330ad9ae6b0f41c6b406a2.jpg {'top_hem_right': 10}
+more than 1 points!   555 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/d628ed916fa5d9ca06693d75acfa3c01.jpg {'top_hem_right': 3}
+more than 1 points!   566 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/d77e5a86afbffe02aed43d4e32d8cf16.jpg {'cuff_left_out': 3, 'cuff_right_out': 4, 'top_hem_left': 4}
+more than 1 points!   567 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/d78da309d9f03f94560c02d39e544bac.jpg {'cuff_left_in': 3, 'cuff_left_out': 3, 'cuff_right_in': 2, 'cuff_right_out': 2}
+more than 1 points!   570 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/91d5097421df6f4b4e7212559aca72fd.jpg {'top_hem_left': 10, 'top_hem_right': 6}
+more than 1 points!   573 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9269966b02392d0f97c345335f630136.jpg {'shoulder_left': 6, 'shoulder_right': 8}
+more than 1 points!   575 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/927499b8a5556f5c36876977a33a8d38.jpg {'shoulder_left': 5, 'shoulder_right': 5}
+more than 1 points!   576 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/92b170101ed2efd9e4a74f8785982cb9.jpg {'cuff_left_in': 5, 'cuff_left_out': 6}
+more than 1 points!   577 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/930c5b9544fc97c4e931e065cb07ab61.jpg {'shoulder_left': 3}
+more than 1 points!   585 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/93cee3ed0b3af90d9c5f3a3f3f73999f.jpg {'shoulder_left': 8, 'shoulder_right': 6}
+more than 1 points!   596 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f8bfff74fe4a087f6a494f7f26201a23.jpg {'cuff_left_in': 4, 'cuff_left_out': 3}
+more than 1 points!   598 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f918c83a584da77039ceef701d0adebe.jpg {'armpit_right': 6}
+more than 1 points!   602 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c6cd11ed267d2dadb1660e14f2a4224c.jpg {'cuff_left_out': 2, 'cuff_right_out': 3}
+more than 1 points!   604 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c73dbc608c207370dbed0fa1ba188ad3.jpg {'shoulder_right': 5, 'cuff_right_in': 5, 'cuff_right_out': 6}
+more than 1 points!   605 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c74c3f74257d1291e70c8db4dd2d1656.jpg {'cuff_right_in': 6}
+more than 1 points!   608 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c7b0211c8a429283cf47969de7f1f3a8.jpg {'center_front': 2}
+more than 1 points!   610 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c809acdf5468b802321ca92a7dac6a8a.jpg {'shoulder_right': 9, 'cuff_left_in': 6, 'cuff_left_out': 8}
+more than 1 points!   623 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c9734d34396fabb168acf56928e519b0.jpg {'cuff_left_in': 4, 'cuff_left_out': 8}
+more than 1 points!   625 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c99bcfca1659aa6a13a2102a48e00a10.jpg {'cuff_right_in': 4, 'cuff_right_out': 6, 'top_hem_left': 5}
+more than 1 points!   629 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e952c253de06d294865c4890a89b2305.jpg {'cuff_left_in': 4, 'cuff_right_in': 5, 'cuff_right_out': 3}
+more than 1 points!   631 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e9aa2735e321bdc49b2c26b64999be7e.jpg {'top_hem_left': 3, 'top_hem_right': 6}
+more than 1 points!   646 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/eb91ba490237df720843fd0cf23e1122.jpg {'top_hem_right': 4}
+more than 1 points!   653 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/105be7beb089309576c9f3faf1a959cc.jpg {'cuff_left_in': 5}
+more than 1 points!   658 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/109ab9fe3bbf5826414e9a241920a700.jpg {'cuff_right_in': 3}
+more than 1 points!   663 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/11c14c4e5a4cbe49f70cd71a847ebb5b.jpg {'top_hem_left': 3}
+more than 1 points!   669 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/131b2a422256b05c5d461691922f7a50.jpg {'top_hem_left': 7}
+more than 1 points!   670 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/137d764775cb2f5c5ad8d7d4011371f0.jpg {'cuff_left_out': 3}
+more than 1 points!   680 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/69fbbeb196e71f99fa5c966c936e225d.jpg {'center_front': 2, 'top_hem_left': 3, 'top_hem_right': 4}
+more than 1 points!   681 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6a18d3713ef0c3d6830ea6bedc9329de.jpg {'top_hem_left': 4, 'top_hem_right': 4}
+more than 1 points!   684 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6a743407255affdae2e34a37c5b23fc7.jpg {'cuff_left_in': 4}
+more than 1 points!   685 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6a840d74f642dd8db4ab2662fd784cb4.jpg {'cuff_left_out': 9, 'cuff_right_out': 3}
+more than 1 points!   687 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6aad6d755d157b9fdb0f136d3db5f4f1.jpg {'top_hem_left': 13, 'top_hem_right': 7}
+more than 1 points!   691 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6afdbeafda494a820c8d8807e72199c4.jpg {'top_hem_right': 6}
+more than 1 points!   694 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6b1b6276494f3d3e21b0c87b02449352.jpg {'top_hem_left': 4}
+more than 1 points!   697 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6b74033b9b379613bd4ee1bae9998170.jpg {'cuff_right_in': 6, 'cuff_right_out': 3}
+more than 1 points!   701 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3ff4b235f640e5db33eb696107a12871.jpg {'center_front': 2}
+more than 1 points!   703 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/400340f05ea3f1c2bf8ffbec9ec7ad86.jpg {'cuff_right_in': 6, 'cuff_right_out': 5}
+more than 1 points!   705 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/402ee234755938a9eddf6b1266624a03.jpg {'cuff_right_out': 4}
+more than 1 points!   712 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/41175e596d29d3ea00f782dd29f10e8d.jpg {'cuff_left_in': 3, 'cuff_left_out': 5, 'cuff_right_in': 6, 'cuff_right_out': 5}
+more than 1 points!   714 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/4145f11ca2cfdd7b1484536c00dd2e0c.jpg {'cuff_left_in': 8, 'cuff_right_in': 4}
+more than 1 points!   715 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/415af23d69a7c60b7e09c36af922b7dd.jpg {'cuff_left_in': 7, 'cuff_left_out': 3, 'cuff_right_in': 2, 'cuff_right_out': 3}
+more than 1 points!   720 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/a385329409ef4a9a495c3019e1a977dc.jpg {'cuff_right_in': 11, 'cuff_right_out': 6}
+more than 1 points!   724 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/a44a24921cb4238187d91dfa11b7d716.jpg {'top_hem_left': 3, 'top_hem_right': 4}
+more than 1 points!   728 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/a580db61b4f7de98ef4c9238a2bc8ca6.jpg {'cuff_left_in': 2, 'cuff_left_out': 2, 'cuff_right_in': 6}
+more than 1 points!   729 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/a5b70e539a505f2fe1ca699ef54d0237.jpg {'cuff_right_out': 4}
+more than 1 points!   733 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/a69ef04525a6a05b2007669b7cb09da9.jpg {'shoulder_left': 2, 'shoulder_right': 3}
+more than 1 points!   734 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/a6a551e7da822ff06c2db9fc461a3e1d.jpg {'shoulder_right': 9}
+more than 1 points!   736 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/4ceba54c87f8384218f8ed446b4dcbce.jpg {'shoulder_left': 3}
+more than 1 points!   743 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/4df832376d6ec7283dd8505371667034.jpg {'shoulder_left': 2, 'shoulder_right': 3}
+more than 1 points!   744 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/4dfd36b9b7510e8b65dbd1ff5884b110.jpg {'cuff_right_out': 3}
+more than 1 points!   748 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/4e7d354576be10ce3162c6cf39965d71.jpg {'cuff_right_in': 5, 'cuff_right_out': 3}
+more than 1 points!   755 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/887e0c4bdb2ddc1714ce1fa6d381a3ed.jpg {'cuff_left_out': 8}
+more than 1 points!   757 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/89236223f2155053046c9b372197045b.jpg {'shoulder_right': 4, 'top_hem_right': 12}
+more than 1 points!   758 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/8a0e3ae0a21005cb03663960165c1693.jpg {'cuff_left_in': 7, 'cuff_left_out': 17, 'cuff_right_in': 7, 'cuff_right_out': 10}
+more than 1 points!   761 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/8aa0f26ddd697d5e58cd594ee443b49d.jpg {'cuff_left_out': 8}
+more than 1 points!   764 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f43e29f9a96d5d56b51bb124704822c6.jpg {'cuff_left_in': 8, 'cuff_left_out': 2, 'cuff_right_in': 7, 'cuff_right_out': 3, 'top_hem_right': 6}
+more than 1 points!   765 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f458fcbf85490e69acd90360186e454a.jpg {'cuff_left_out': 3, 'cuff_right_in': 6, 'cuff_right_out': 5}
+more than 1 points!   767 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f48306505564732deba9bea0b54d1037.jpg {'shoulder_left': 5, 'shoulder_right': 2}
+more than 1 points!   769 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f49cbb8df17916a47885167008029763.jpg {'cuff_left_in': 5, 'cuff_left_out': 4}
+more than 1 points!   774 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f598d41536016c1f1d487dfad159af38.jpg {'cuff_right_in': 7, 'cuff_right_out': 12}
+more than 1 points!   776 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f622e13e857cc8d9afc67621a6c0563a.jpg {'top_hem_right': 4}
+more than 1 points!   777 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/2e11bd2a9e09a823fff71b6ad7801ad9.jpg {'cuff_left_in': 3}
+more than 1 points!   784 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/2f38c6533059ddcb48ce8d0d3f28fa10.jpg {'cuff_left_in': 2, 'cuff_left_out': 3, 'cuff_right_in': 3}
+more than 1 points!   793 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/1ae64b2a64400176184809ac0012c425.jpg {'cuff_left_out': 6}
+more than 1 points!   794 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/1af6ceee7fdc5917c556241b2cd6aa17.jpg {'cuff_left_in': 6, 'cuff_left_out': 15}
+more than 1 points!   796 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/1b461e6991ae2c9c36c4771500651dfd.jpg {'shoulder_right': 2}
+more than 1 points!   801 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/1bd079d46ee90cc785b189ab1ffdb7eb.jpg {'cuff_left_out': 7}
+more than 1 points!   815 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/38b82da2d46b54236f8da86ebac09647.jpg {'cuff_right_in': 7}
+more than 1 points!   820 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/397e0996e9cd26603e3a316b601f54c4.jpg {'shoulder_right': 7}
+more than 1 points!   829 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/958f2051f0b8fd2f661ad4a4ad2a4fea.jpg {'shoulder_left': 10}
+more than 1 points!   831 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/95ad518424fb68701b1102d7fb3952da.jpg {'cuff_left_out': 4}
+more than 1 points!   835 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/961dacc4e6b3fff001393dacc70a9de2.jpg {'top_hem_right': 3}
+more than 1 points!   839 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/96add227bfcf14e340cf8c177477ac98.jpg {'neckline_left': 4, 'shoulder_right': 5, 'armpit_left': 5, 'cuff_left_in': 3, 'cuff_left_out': 3}
+more than 1 points!   843 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/60d87dd3806e62833d9fadd43ff3b073.jpg {'cuff_left_in': 9, 'cuff_left_out': 8, 'cuff_right_out': 2}
+more than 1 points!   845 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/60f3e3b4188bb4bee2d08f2416233c33.jpg {'cuff_left_out': 5, 'cuff_right_in': 5, 'cuff_right_out': 9}
+more than 1 points!   852 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/622a22620df4cd0b61596b287d2f5fba.jpg {'cuff_right_in': 4, 'cuff_right_out': 4}
+more than 1 points!   853 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/624f7b8d996f4ed48091526e15152db9.jpg {'cuff_left_in': 5, 'cuff_left_out': 6, 'cuff_right_out': 5}
+more than 1 points!   860 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/63946ec6b448bdc1cd0f07d3ea9d51dc.jpg {'cuff_left_out': 3}
+more than 1 points!   861 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/0a8005c776fe96816ae93510c237856a.jpg {'cuff_left_in': 6, 'cuff_left_out': 8, 'cuff_right_in': 2, 'cuff_right_out': 8}
+more than 1 points!   864 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/0aa907187708a396614cbfda7a13fb87.jpg {'armpit_right': 3, 'top_hem_left': 4, 'top_hem_right': 2}
+more than 1 points!   873 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/0b76eddcebd951b49269e6abbb5d767c.jpg {'top_hem_right': 14}
+more than 1 points!   875 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/0bb3b7cb10452dc051c56083352162ea.jpg {'shoulder_right': 4}
+more than 1 points!   880 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/0c67d19559b97e14fc69e914173bea00.jpg {'cuff_left_out': 3}
+more than 1 points!   893 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/bb317620f7159d2d61b26a3aa36c115b.jpg {'shoulder_left': 7, 'shoulder_right': 8, 'cuff_left_out': 3}
+more than 1 points!   902 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/bbee55f7045a671e12ed7e2fdaf8b3af.jpg {'center_front': 2}
+more than 1 points!   915 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/261e66ba9eca99d203fee2f5aa61f6bf.jpg {'top_hem_right': 4}
+more than 1 points!   916 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/265a57cee1a71b50429ebefa3b4eb53a.jpg {'top_hem_left': 5}
+more than 1 points!   917 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/268456b8ec3fdea10979b30335cc0ce0.jpg {'cuff_left_out': 12}
+more than 1 points!   918 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/26d850f52b4bcfe916f5d890096e321b.jpg {'cuff_left_out': 5}
+more than 1 points!   935 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/5976281abbc3aacb37c440b309db23ce.jpg {'cuff_left_in': 6, 'cuff_left_out': 8, 'cuff_right_in': 14, 'cuff_right_out': 4}
+more than 1 points!   940 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/5a2211f38d1d8ca016fe81316a252be1.jpg {'shoulder_left': 2, 'shoulder_right': 3, 'cuff_left_out': 3, 'cuff_right_out': 2}
+more than 1 points!   945 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e016e23881094b3b29611091b05cc4ac.jpg {'cuff_left_in': 8, 'cuff_left_out': 5}
+more than 1 points!   947 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e04e65168aa9f1f130de39055fced595.jpg {'cuff_left_in': 5, 'cuff_left_out': 5, 'cuff_right_in': 8, 'cuff_right_out': 10}
+more than 1 points!   949 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e0dbb11033149d28d888c8a34faa13ce.jpg {'cuff_right_out': 3}
+more than 1 points!   952 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e15a5c6d8cf4bb94874d14e9ef47550f.jpg {'shoulder_left': 7}
+more than 1 points!   954 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e2464c7440c85c0288680e515f8fbb32.jpg {'cuff_left_in': 5}
+more than 1 points!   955 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e28dedd5926dbd5d9b46f21f989052fb.jpg {'cuff_left_in': 7, 'cuff_left_out': 7, 'cuff_right_in': 10, 'cuff_right_out': 7}
+more than 1 points!   968 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/bf714f19d19ee89830679af489f32bc4.jpg {'shoulder_right': 3}
+more than 1 points!   970 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c484ce36a77aa6212e425dd6ef2cf54b.jpg {'cuff_left_out': 3, 'cuff_right_in': 5}
+more than 1 points!   972 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c9dc722fce6473fde88f31117c055b66.jpg {'armpit_left': 3, 'armpit_right': 2, 'cuff_left_in': 2, 'cuff_left_out': 4, 'cuff_right_in': 4, 'cuff_right_out': 2, 'top_hem_right': 4}
+more than 1 points!   976 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/d1e7fa863061384ee0eeb725512e6a9b.jpg {'shoulder_left': 3, 'shoulder_right': 2}
+more than 1 points!   977 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/d4316d238c4975bbf566e740aeff0124.jpg {'shoulder_left': 4}
+more than 1 points!   982 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/b51af585cfba08ffcc6dda0d8a2b029b.jpg {'cuff_left_out': 2, 'cuff_right_in': 11, 'cuff_right_out': 3, 'top_hem_right': 9}
+more than 1 points!   983 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/b52392813ec5649646cdccb7380ac431.jpg {'cuff_right_in': 3, 'cuff_right_out': 5}
+more than 1 points!   990 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/b5f2586bf36786c6772a11c5a17b30bf.jpg {'shoulder_left': 7, 'shoulder_right': 4}
+more than 1 points!   992 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/b604ae62a6ac59980f3391a0f8b4d6d0.jpg {'top_hem_right': 5}
+more than 1 points!   993 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/b6223d9c281acbb0e77d269ba213c8be.jpg {'cuff_left_in': 3, 'cuff_left_out': 4}
+more than 1 points!   996 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/b67b4a5f9f785c7372fc4974c4e81424.jpg {'cuff_left_in': 6, 'cuff_left_out': 6, 'cuff_right_in': 3, 'cuff_right_out': 4, 'top_hem_right': 4}
+more than 1 points!   998 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/b6cc757735b8a37ad76340c4b7ee4f5f.jpg {'cuff_right_in': 10}
+more than 1 points!  1007 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/781a2732b805d6ab4d121beda9be86cb.jpg {'cuff_left_in': 4, 'cuff_left_out': 5}
+more than 1 points!  1008 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/7821c34cfc175bceaecdb7443da94be0.jpg {'cuff_left_out': 4}
+more than 1 points!  1017 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/ababff700d682e25ff925aae4fdc16b4.jpg {'shoulder_left': 5, 'cuff_left_in': 3, 'cuff_left_out': 2, 'cuff_right_out': 4, 'top_hem_left': 8}
+more than 1 points!  1019 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/abff499ec8a8cb32c9a7520cd3531344.jpg {'shoulder_right': 6, 'cuff_left_in': 2, 'cuff_right_in': 8}
+more than 1 points!  1020 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/ac08ed219154a9c241d3d68d93164a4a.jpg {'top_hem_right': 6}
+more than 1 points!  1024 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/ac626955bb95ebf31caa1f070920d2f8.jpg {'cuff_left_out': 2}
+more than 1 points!  1029 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/d0e635cdea0e279b40eef76120e1a3ad.jpg {'cuff_right_in': 18, 'cuff_right_out': 4}
+more than 1 points!  1030 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/d0f0e0698e4ba0e69cc3eb8d8aa62d75.jpg {'shoulder_right': 3, 'cuff_left_in': 2, 'cuff_left_out': 3, 'cuff_right_in': 3, 'top_hem_right': 5}
+more than 1 points!  1037 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/d19811712da0d4f8136d228b71cd285e.jpg {'top_hem_right': 3}
+more than 1 points!  1041 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/d1e0c8410186f92e210e2e66633a4be3.jpg {'cuff_left_out': 3}
+more than 1 points!  1044 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/148f0df79e4fc7208a514b3e7415fd1c.jpg {'cuff_left_in': 3, 'cuff_right_in': 4, 'cuff_right_out': 4}
+more than 1 points!  1050 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/14ee0d8af70ecbe12d0d8f4c1a6dd8ba.jpg {'top_hem_left': 6, 'top_hem_right': 4}
+more than 1 points!  1053 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/155ee7793d159e227afb5f2e87ecf37b.jpg {'top_hem_left': 6}
+more than 1 points!  1056 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/1617eee7274e4af584e1399e25d8aff6.jpg {'cuff_left_in': 10, 'cuff_left_out': 6}
+more than 1 points!  1057 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/162bac6d2ed167a4431bbdb038c979d8.jpg {'cuff_right_in': 3, 'cuff_right_out': 5}
+more than 1 points!  1058 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/16360b4ccf8193fc3bec6a48c7f2644c.jpg {'cuff_left_in': 4, 'cuff_left_out': 2, 'cuff_right_in': 2, 'cuff_right_out': 3}
+more than 1 points!  1060 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/16a0f7eea1d10ccd1dfd887ea9e4b7ba.jpg {'cuff_right_in': 3}
+more than 1 points!  1061 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/16cc19f9b0fa16fb1892f49988aae47a.jpg {'cuff_left_in': 7, 'cuff_left_out': 6}
+more than 1 points!  1063 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3be75d11420e054515211261afc991bc.jpg {'cuff_left_in': 4, 'cuff_left_out': 7}
+more than 1 points!  1065 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3f81e97844f1bc20a2e0a6ee6a848579.jpg {'cuff_left_in': 2, 'cuff_left_out': 2, 'cuff_right_in': 4, 'cuff_right_out': 4}
+more than 1 points!  1069 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/48eb0015a678ac6061474ff8d1afff78.jpg {'cuff_right_in': 9, 'cuff_right_out': 8}
+more than 1 points!  1070 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/4ada6650ebfbeebeea276f5650ec0a7b.jpg {'cuff_left_in': 5, 'cuff_left_out': 4, 'cuff_right_in': 2}
+more than 1 points!  1072 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/4ed766ace23558bbef08578888984583.jpg {'cuff_left_in': 3, 'cuff_left_out': 5}
+more than 1 points!  1073 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/504bf98dccaf92d113ee5277c828938f.jpg {'cuff_right_in': 7, 'cuff_right_out': 8}
+more than 1 points!  1076 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/66af57c226185ea480e8cae271d4b372.jpg {'top_hem_left': 4}
+more than 1 points!  1088 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/67da805d48aab90de9c3c53f7f18e71a.jpg {'top_hem_right': 6}
+more than 1 points!  1089 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c9edb5bd9a952bddcd0bef17175ace06.jpg {'shoulder_left': 3, 'shoulder_right': 4}
+more than 1 points!  1094 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/ca34e43daf46f10f4af5787057702aca.jpg {'shoulder_left': 5, 'shoulder_right': 4}
+more than 1 points!  1096 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/ca7fb40030f0d85a42145f378b2a1e6a.jpg {'cuff_left_in': 3, 'cuff_left_out': 5}
+more than 1 points!  1097 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/ca8f1bc776f64d6266d97a26c708015d.jpg {'shoulder_left': 5, 'shoulder_right': 2}
+more than 1 points!  1098 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/ca9f2ed9f7056f3211c38688ed46c59e.jpg {'cuff_left_out': 2, 'cuff_right_in': 4, 'cuff_right_out': 3}
+more than 1 points!  1105 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/42d911fc017bf975bfda669470f76cdd.jpg {'top_hem_right': 14}
+more than 1 points!  1107 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/42e4bb8af996c2ec4a6f5bd9087f791b.jpg {'cuff_left_out': 3, 'cuff_right_out': 5}
+more than 1 points!  1108 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/4312f18fad7d895d8b46d95cacf9ec48.jpg {'cuff_right_in': 6}
+more than 1 points!  1109 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/43a7a257deb3b3078c722a703d22f24f.jpg {'cuff_left_in': 14, 'cuff_left_out': 13}
+more than 1 points!  1128 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/8f68ae487b9079acf6d8af0cf335d430.jpg {'neckline_right': 8, 'center_front': 2, 'shoulder_left': 3, 'shoulder_right': 3}
+more than 1 points!  1135 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9084e7d85b95a5ba703a86681be7ddd0.jpg {'cuff_left_out': 3}
+more than 1 points!  1138 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/90d27a6e1637571a0d997fa3274731eb.jpg {'center_front': 2, 'shoulder_left': 11}
+more than 1 points!  1143 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/911ae3c72b48c8fa146cefbdbc8a7f4f.jpg {'cuff_left_in': 3, 'cuff_left_out': 3}
+more than 1 points!  1144 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/911ddcb87601b29379324014a4d93733.jpg {'shoulder_left': 6, 'shoulder_right': 5}
+more than 1 points!  1147 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/91481dec872e3a36262728abb7e0f91a.jpg {'top_hem_left': 5, 'top_hem_right': 7}
+more than 1 points!  1150 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9af8213fc21611beb059cff5dd78e598.jpg {'cuff_right_out': 3}
+more than 1 points!  1153 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9bd9fc7dc69d3f82a15c7b301e554f4a.jpg {'armpit_left': 4, 'cuff_left_out': 2}
+more than 1 points!  1154 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9c063202a2394c29462a0760c3d24502.jpg {'cuff_left_in': 2, 'cuff_right_in': 3}
+more than 1 points!  1157 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9c955c6a6757ba574c34f7608640a5ea.jpg {'shoulder_left': 9, 'shoulder_right': 23}
+more than 1 points!  1158 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9c9637f8ef26eb98406f7808e999c0f2.jpg {'cuff_right_in': 4, 'cuff_right_out': 4}
+more than 1 points!  1159 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9c9890a40a920d747e4be7126e19831e.jpg {'cuff_left_out': 7}
+more than 1 points!  1167 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/ecd216116579580f36da0e2f551e0b6e.jpg {'armpit_left': 3, 'cuff_left_in': 2, 'cuff_right_in': 3, 'cuff_right_out': 5}
+more than 1 points!  1169 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/ed54db874e5f60d4cc808bc612fc0f12.jpg {'cuff_left_out': 4}
+more than 1 points!  1172 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/ed9e3ce67b9dd7513375b25cc770bdb4.jpg {'neckline_right': 10, 'center_front': 3, 'shoulder_right': 4, 'cuff_left_in': 4, 'cuff_left_out': 5, 'cuff_right_in': 2, 'cuff_right_out': 4}
+more than 1 points!  1178 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/fce469f01470eb6221e118b90b7b919c.jpg {'cuff_right_in': 3, 'cuff_right_out': 5}
+more than 1 points!  1186 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/fd8fb181307c64936b8f221db2e7cb41.jpg {'shoulder_left': 4}
+more than 1 points!  1206 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/7120de6e180b0cb0200fcf75e56adccf.jpg {'cuff_left_out': 2, 'cuff_right_out': 5}
+more than 1 points!  1216 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/724f1abd8a56008d42e238ed28bf90da.jpg {'cuff_left_out': 5}
+more than 1 points!  1223 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/1d6782c4a5b143509d08e5483070dc67.jpg {'cuff_left_in': 8, 'cuff_left_out': 5, 'cuff_right_in': 2, 'cuff_right_out': 5, 'top_hem_left': 5, 'top_hem_right': 6}
+more than 1 points!  1227 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/1e11b508b0565c3ef647c914183c204d.jpg {'cuff_left_in': 3, 'cuff_left_out': 5, 'cuff_right_in': 3, 'cuff_right_out': 4, 'top_hem_right': 4}
+more than 1 points!  1231 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/1e61a4ab59354160076ba772a40ee2a2.jpg {'cuff_left_out': 5}
+more than 1 points!  1242 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/521f1aad0ec16bc90122ddca380481ae.jpg {'cuff_right_out': 3}
+more than 1 points!  1243 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/522232ba72d3de7cc31c29addcec077a.jpg {'cuff_right_in': 14}
+more than 1 points!  1246 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/5250883045820ef9b1aca2e0ae88ab28.jpg {'neckline_left': 3, 'neckline_right': 2, 'center_front': 3, 'shoulder_left': 5, 'shoulder_right': 9, 'armpit_left': 2, 'armpit_right': 6, 'cuff_left_out': 2, 'cuff_right_out': 3}
+more than 1 points!  1253 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/535e35645fc82fa6e534e80999c0027b.jpg {'cuff_left_out': 4}
+more than 1 points!  1256 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/539459e831ed3326826f1ab230de4625.jpg {'top_hem_left': 3}
+more than 1 points!  1261 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c3448e41eeaa27c7d81216225a546682.jpg {'top_hem_right': 3}
+more than 1 points!  1266 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c3671883d7f94ecee5a2ce89785c3c43.jpg {'cuff_left_in': 4}
+more than 1 points!  1269 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c3ae182e71d40997132525c5867f10dd.jpg {'shoulder_right': 3}
+more than 1 points!  1270 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c3c863a2ed32eb0ebc70187f8d0ccf38.jpg {'cuff_left_in': 3, 'cuff_left_out': 8}
+more than 1 points!  1289 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/372af6c88f8e9e540c4052a7da7ed19d.jpg {'shoulder_left': 3, 'shoulder_right': 2}
+more than 1 points!  1292 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/376dc0bbeac5ff61f3107ba555d0713f.jpg {'cuff_right_out': 5}
+more than 1 points!  1294 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/a1094b944d9e22b3af12c7e890b7a554.jpg {'cuff_right_in': 3, 'cuff_right_out': 3}
+more than 1 points!  1307 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/a215b777bfe423ff63ab4f7d98a33448.jpg {'top_hem_right': 4}
+more than 1 points!  1310 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/a251180b0111a462480dd6ba2e40a1e6.jpg {'shoulder_right': 5}
+more than 1 points!  1312 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/a2bfe3f8c2e284646bce3cee28a1766c.jpg {'cuff_left_in': 10, 'cuff_left_out': 6, 'cuff_right_in': 3, 'cuff_right_out': 8}
+more than 1 points!  1320 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6bebeaae0ea5c42641792f9908c1008f.jpg {'cuff_left_in': 4, 'cuff_left_out': 6, 'cuff_right_in': 2}
+more than 1 points!  1321 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6c0c1d09113bc9436b615b3c04b185b7.jpg {'cuff_left_in': 2, 'cuff_right_in': 4}
+more than 1 points!  1323 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6c3c4498f975fcedd8e0c760bc4623e5.jpg {'cuff_left_in': 5, 'cuff_left_out': 13, 'cuff_right_in': 12, 'cuff_right_out': 11}
+more than 1 points!  1327 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6cea7dfae6a06082e4e36d6860095a8d.jpg {'cuff_right_in': 2, 'cuff_right_out': 5}
+more than 1 points!  1328 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6ced4d4837fff40ac9886eb0b13b3f60.jpg {'shoulder_right': 6}
+more than 1 points!  1334 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/7fa3f768e5b1ed98ab447e2b72ecd590.jpg {'cuff_right_in': 3, 'cuff_right_out': 3}
+more than 1 points!  1339 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/80d75e7c91bdbe2b69e12053018f6170.jpg {'cuff_left_out': 6}
+more than 1 points!  1341 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/8126ab66003e7dd655e03a47c0aaa9c1.jpg {'cuff_left_out': 13, 'cuff_right_out': 2}
+more than 1 points!  1350 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/5db4256bd65ffe1726e8444f166407f6.jpg {'cuff_left_out': 4}
+more than 1 points!  1352 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/5dcfe8c7ad0bb45ce70bb6c28964710a.jpg {'top_hem_left': 3}
+more than 1 points!  1353 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/5dde6443626035a96a7485a86b1cb8d8.jpg {'cuff_left_out': 4, 'cuff_right_out': 2}
+more than 1 points!  1355 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/5df4b8282e46982944e3c8ea3bcbe6be.jpg {'neckline_right': 4, 'armpit_left': 7}
+more than 1 points!  1356 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/5dfa9bf8e467bb99234c0b2cb436e6f1.jpg {'cuff_left_in': 4}
+more than 1 points!  1359 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/5e2a8a6080c054ea8e444f1869dd5867.jpg {'top_hem_left': 4, 'top_hem_right': 6}
+more than 1 points!  1365 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/2beadb8d8dc331701933b2a08403a96d.jpg {'top_hem_left': 4, 'top_hem_right': 2}
+more than 1 points!  1370 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/2c4e41d5512c756c9cf6ce3625d64f37.jpg {'cuff_right_in': 10, 'cuff_right_out': 4}
+more than 1 points!  1388 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/94ea5edd94aaea991b83a9f905c69921.jpg {'cuff_right_in': 2, 'cuff_right_out': 4}
+more than 1 points!  1389 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/94ed92b3c27b096125fd5f54a156d7ce.jpg {'cuff_right_in': 5}
+more than 1 points!  1396 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/fa0fba26e0cf899f69d01ffa3ea9f17f.jpg {'cuff_left_out': 3, 'cuff_right_out': 2, 'top_hem_right': 6}
+more than 1 points!  1400 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/fa536d0c2195a69e93c486df7a9cef3e.jpg {'cuff_left_in': 4, 'cuff_left_out': 10, 'cuff_right_in': 2, 'cuff_right_out': 6}
+more than 1 points!  1402 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/fa7b46d8b27b989eaa6249a9535266cf.jpg {'cuff_right_out': 5}
+more than 1 points!  1405 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/fb42fa7378c6eb4ba1398e0fa3d798e2.jpg {'cuff_left_out': 4}
+more than 1 points!  1409 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/fba6a963a99d5d55f1e94a3200cb98b9.jpg {'cuff_left_out': 3}
+more than 1 points!  1410 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/fbbb80909ac79c4f8bda18345d120f69.jpg {'cuff_left_in': 7, 'cuff_left_out': 10}
+more than 1 points!  1412 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/fc3060d9a5e30903c5c01ed1a2c03f9d.jpg {'cuff_left_out': 4}
+more than 1 points!  1418 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/d85becf899ee20d41872fc8c576c7fee.jpg {'cuff_left_in': 4, 'cuff_left_out': 16, 'cuff_right_in': 2, 'cuff_right_out': 2}
+more than 1 points!  1421 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/d8ff8066dfd260a584ad46c75106f5be.jpg {'cuff_left_in': 16, 'cuff_left_out': 11, 'cuff_right_in': 26, 'cuff_right_out': 5}
+more than 1 points!  1424 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/d937fe8d5241d7e946e01ab0c52d5698.jpg {'cuff_right_out': 8}
+more than 1 points!  1429 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/d9c14484905ddbe53ebe48f03aa9182e.jpg {'cuff_left_in': 3, 'cuff_left_out': 9}
+more than 1 points!  1430 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/d9d7becdea51430a4311adb94377e9ba.jpg {'center_front': 2}
+more than 1 points!  1443 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e8090f0c270aa083ec9fe34a3dc70301.jpg {'cuff_right_out': 5}
+more than 1 points!  1446 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e84b15fcf61a967d046fc9012a387224.jpg {'cuff_right_out': 3, 'top_hem_left': 3, 'top_hem_right': 2}
+more than 1 points!  1457 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/d2e39b178464a592da0d821942e9c452.jpg {'center_front': 2}
+more than 1 points!  1458 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/d32f0b93c80ae68a9405babe74ac08f4.jpg {'top_hem_right': 3}
+more than 1 points!  1462 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/d3aa7a58809aab8ee9c098947aa59260.jpg {'neckline_left': 4, 'neckline_right': 2, 'center_front': 3, 'shoulder_left': 4, 'shoulder_right': 2, 'armpit_left': 5}
+more than 1 points!  1468 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/8597c36f57a6ba0792bb367e8d89623c.jpg {'cuff_left_in': 6, 'cuff_left_out': 14, 'cuff_right_in': 2, 'cuff_right_out': 2}
+more than 1 points!  1471 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/85c3fa8b0acdae53d2ebd4a0ec2d5015.jpg {'cuff_right_in': 4, 'cuff_right_out': 3}
+more than 1 points!  1472 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/861d4a117816ce0e73180168e3ade2b9.jpg {'cuff_right_out': 3}
+more than 1 points!  1474 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/862fe6cbaa552abbd4f209a7ed89878d.jpg {'cuff_left_in': 10, 'cuff_left_out': 8}
+more than 1 points!  1475 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/86467f7f29f7a8ed0153386062523011.jpg {'cuff_right_out': 3}
+more than 1 points!  1487 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3a705e3597a31f366e142e226cc4bbe4.jpg {'cuff_left_out': 9}
+more than 1 points!  1488 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3a7574112d33df417aaa2297f0e3b27f.jpg {'top_hem_left': 5}
+more than 1 points!  1489 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3a76d51a85fee74f3925312f14a1c295.jpg {'top_hem_left': 2, 'top_hem_right': 5}
+more than 1 points!  1491 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3a7f262b0ec88233b0ef70f826d192b3.jpg {'cuff_right_in': 5}
+more than 1 points!  1492 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3aad5547be61135dae4d71f0ca6a09e7.jpg {'cuff_right_in': 5}
+more than 1 points!  1503 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3bb975c2a679c9663c645e8f7c2bc175.jpg {'neckline_left': 4, 'neckline_right': 2, 'center_front': 2, 'shoulder_left': 11, 'shoulder_right': 2, 'cuff_right_in': 4}
+more than 1 points!  1507 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/ddba923645dfe5674c415c67e0f2aa72.jpg {'cuff_left_in': 5, 'cuff_left_out': 7, 'cuff_right_in': 4, 'cuff_right_out': 9, 'top_hem_left': 5}
+more than 1 points!  1512 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/de511bd0db5a39bda909883797c11df4.jpg {'cuff_left_out': 3, 'cuff_right_out': 2}
+more than 1 points!  1524 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3de1355f843f4825ebab4d5a96d03cd1.jpg {'cuff_right_in': 3, 'cuff_right_out': 7}
+more than 1 points!  1525 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3de38d72981384df89f44a2505ea1572.jpg {'cuff_right_in': 6, 'cuff_right_out': 8}
+more than 1 points!  1529 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/3e6c2e4e9f8071afb02129fe6d59e632.jpg {'cuff_left_in': 7, 'cuff_left_out': 5, 'cuff_right_in': 2, 'cuff_right_out': 2}
+more than 1 points!  1540 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/309151abae3a88baab5dd17684f5be0b.jpg {'cuff_left_in': 3}
+more than 1 points!  1543 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/314fd88f253e2cf3c660ff428ef82afd.jpg {'cuff_left_out': 2, 'cuff_right_in': 3, 'cuff_right_out': 5}
+more than 1 points!  1545 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/31ac02adda00e92ca1fd20e7eabf1207.jpg {'cuff_left_in': 3, 'cuff_left_out': 5, 'cuff_right_out': 2}
+more than 1 points!  1558 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/a78f6b38100dbadee070f6550628d8b2.jpg {'top_hem_right': 4}
+more than 1 points!  1559 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/a79b0a9ce452c0a421efd8195444d240.jpg {'cuff_left_out': 5}
+more than 1 points!  1575 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/4fa4ab3f81c777f2403c5c36a75203ed.jpg {'cuff_right_in': 5, 'cuff_right_out': 3}
+more than 1 points!  1579 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/501dc4287459938201e7862a86549fba.jpg {'cuff_left_in': 4, 'cuff_left_out': 4}
+more than 1 points!  1582 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/504880e30001b0f4751f267f416e67f8.jpg {'cuff_left_out': 8}
+more than 1 points!  1586 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/568243c0dd80e6c431008eb245ed5b20.jpg {'cuff_right_in': 11, 'cuff_right_out': 8}
+more than 1 points!  1587 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/56885aee2f889a1cc496f89bc89d18c4.jpg {'cuff_right_in': 6, 'cuff_right_out': 7}
+more than 1 points!  1591 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/56d6f5cc8c628f90eea7e7e49f2f8da1.jpg {'shoulder_right': 8}
+more than 1 points!  1602 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c55fbae2e7a89cf446d70592cd9a8e09.jpg {'neckline_right': 3}
+more than 1 points!  1603 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c5913df4d7758880e000cf7bbb933218.jpg {'cuff_left_out': 7}
+more than 1 points!  1606 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c5b91edae486747e36910d900c6e8fae.jpg {'center_front': 2, 'shoulder_right': 5, 'cuff_right_in': 5, 'cuff_right_out': 4, 'top_hem_right': 9}
+more than 1 points!  1607 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c5daabf11feee3cd36ab6d9a67baae7b.jpg {'cuff_left_out': 2, 'cuff_right_in': 4, 'cuff_right_out': 5}
+more than 1 points!  1609 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/c62b20bee197ac1ba496fea7c873061f.jpg {'cuff_left_in': 3, 'cuff_right_in': 7}
+more than 1 points!  1613 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/eeb6a715f71dee78f1148bdfa9567af1.jpg {'shoulder_left': 4, 'shoulder_right': 9, 'armpit_left': 7, 'cuff_left_in': 7, 'cuff_right_in': 4}
+more than 1 points!  1615 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/ef20efef39fe3bee430b39d60ebff0ee.jpg {'cuff_left_in': 2, 'cuff_right_in': 6}
+more than 1 points!  1617 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/ef55e75eea1f18db92dafdf970540d33.jpg {'cuff_right_in': 3, 'cuff_right_out': 3}
+more than 1 points!  1619 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/ef61f80d5f5bf95d584225e3120d026d.jpg {'cuff_left_out': 5, 'top_hem_left': 2, 'top_hem_right': 9}
+more than 1 points!  1623 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/efe3cfcb2fc4e571ba31863dd737f4eb.jpg {'neckline_left': 5}
+more than 1 points!  1626 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/dd6750fcc49339c1784f47bd9b1d9503.jpg {'cuff_left_out': 3}
+more than 1 points!  1628 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/e46b8971f2bb368d7a866767c665e9a5.jpg {'shoulder_left': 6, 'shoulder_right': 5}
+more than 1 points!  1632 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/ee26b0cf95c549237a55548ac1666306.jpg {'cuff_right_out': 8}
+more than 1 points!  1636 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f7a239e7ce5b23cff9ff1dd47863edde.jpg {'neckline_left': 3, 'neckline_right': 3, 'center_front': 4, 'shoulder_left': 5, 'shoulder_right': 5, 'armpit_right': 5}
+more than 1 points!  1638 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/fc868d7d7aabdac45fdebff456454208.jpg {'shoulder_right': 6}
+more than 1 points!  1645 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/7a710bc57ad154bfef13bae4be3afacb.jpg {'cuff_left_out': 4, 'cuff_right_out': 4}
+more than 1 points!  1651 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/7b75167ce421ccb21a50198bc63ca62f.jpg {'cuff_left_in': 6, 'cuff_left_out': 12}
+more than 1 points!  1653 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/081e8866d582c55ed522f6b5b57a0c0d.jpg {'cuff_right_in': 3, 'cuff_right_out': 7, 'top_hem_right': 5}
+more than 1 points!  1654 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/085fe9a44a77f2788f93a44ff37e899f.jpg {'top_hem_right': 3}
+more than 1 points!  1655 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/087ad03c8246eaf8032078209a85017c.jpg {'cuff_left_in': 5}
+more than 1 points!  1656 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/08c8749d6b7e1762cae2b0168423aeda.jpg {'top_hem_right': 3}
+more than 1 points!  1666 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/0a6d548de739bdf706ba2682d2f1d7de.jpg {'top_hem_right': 3}
+more than 1 points!  1667 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/0a77868d2697cfa21f400e4cedc972c9.jpg {'top_hem_left': 2, 'top_hem_right': 10}
+more than 1 points!  1670 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/cb5ee1cc286656be33bcc4015396f814.jpg {'cuff_left_out': 2}
+more than 1 points!  1678 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/cc5c8c03ffc24461ad209f62e8403e6b.jpg {'cuff_right_in': 12, 'cuff_right_out': 4}
+more than 1 points!  1685 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9720ff74315b11dc7b125e07257b7a61.jpg {'neckline_left': 3, 'shoulder_left': 16, 'shoulder_right': 4, 'armpit_left': 6}
+more than 1 points!  1688 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/975a9f4a92b8f44fd5f31f78206bd5fa.jpg {'cuff_right_in': 5, 'cuff_right_out': 5}
+more than 1 points!  1689 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/975b3c354397b15351f8138c28f9c7ce.jpg {'cuff_left_in': 4, 'cuff_left_out': 3}
+more than 1 points!  1690 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/976f596ef9f2dd9c2550f387c0b3d059.jpg {'cuff_left_in': 8, 'cuff_left_out': 5}
+more than 1 points!  1698 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/984c5d6d0fdb2d91c47a38bb33b8cd4e.jpg {'shoulder_left': 6, 'shoulder_right': 11, 'cuff_left_out': 5, 'cuff_right_in': 17, 'cuff_right_out': 12}
+more than 1 points!  1700 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/98aff06e45874f51644765c5920cbbab.jpg {'shoulder_right': 4, 'cuff_left_in': 7, 'cuff_left_out': 8}
+more than 1 points!  1706 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/b32f5e4b1a5a9299d018afb5398e0a09.jpg {'cuff_left_in': 5}
+more than 1 points!  1714 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/b44053aa4c1a1a1c41ba369decde2dc2.jpg {'cuff_left_in': 4, 'cuff_left_out': 7, 'cuff_right_in': 3, 'cuff_right_out': 4}
+more than 1 points!  1720 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/98c10da75fbabae95566b473543b29a3.jpg {'armpit_left': 4}
+more than 1 points!  1723 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9e58b5902643c657028e2feb75acde23.jpg {'cuff_left_in': 5, 'cuff_left_out': 3, 'cuff_right_in': 2}
+more than 1 points!  1727 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/a854a4d5a40d5433fa3ecf92e4228816.jpg {'cuff_right_in': 10, 'cuff_right_out': 4}
+more than 1 points!  1738 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/dac7ba82a25ee971a2ad25456354ff30.jpg {'cuff_left_in': 5, 'cuff_left_out': 6}
+more than 1 points!  1742 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/8b166195fb3db2723d211fd8d141ac45.jpg {'cuff_right_in': 9, 'cuff_right_out': 4}
+more than 1 points!  1745 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/8b67bb91eb6b0df9813226886bfc423d.jpg {'shoulder_right': 4, 'cuff_left_out': 6}
+more than 1 points!  1747 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/8bcef406b669d71f57ae452d6215e911.jpg {'cuff_left_in': 6, 'cuff_left_out': 8, 'cuff_right_in': 5, 'cuff_right_out': 3}
+more than 1 points!  1748 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/8bcf558cd8a9e6797c3ed0b5bc02bb18.jpg {'top_hem_right': 4}
+more than 1 points!  1749 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/8bd7bcc79ab1828f9cbd40ec2965b477.jpg {'armpit_right': 3}
+more than 1 points!  1758 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/72c969893741593f3eaa274a29775dec.jpg {'armpit_right': 6, 'cuff_left_in': 6, 'cuff_left_out': 8, 'cuff_right_in': 7, 'cuff_right_out': 3, 'top_hem_left': 4, 'top_hem_right': 8}
+more than 1 points!  1759 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/72ccc15ac1cba6337d550c3fd87155ae.jpg {'top_hem_left': 2, 'top_hem_right': 3}
+more than 1 points!  1769 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/acb399a4374c3a49520738def4a1362d.jpg {'cuff_right_out': 9, 'top_hem_right': 7}
+more than 1 points!  1774 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/ad2fbefc177eacf5fcb6050bc3c80d1d.jpg {'cuff_left_out': 5, 'cuff_right_out': 4}
+more than 1 points!  1775 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/ad32880c0d047e3dd10cfa77b7979764.jpg {'cuff_left_out': 4}
+more than 1 points!  1779 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/adc045a7b58ad9102511b76fa020cd7a.jpg {'top_hem_left': 2, 'top_hem_right': 3}
+more than 1 points!  1781 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/adeef70811dd8231c1d4915d08fd847f.jpg {'cuff_right_out': 4}
+more than 1 points!  1784 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f6bcfdecc462cffdf6ca95d7221e4d0f.jpg {'cuff_left_in': 4, 'cuff_left_out': 8}
+more than 1 points!  1785 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f6bcfdf3e30fee062bba7b11a73f1f81.jpg {'top_hem_right': 3}
+more than 1 points!  1786 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f6c0447d0e96496d2a08a4eb595a3a18.jpg {'cuff_left_out': 3, 'cuff_right_out': 2}
+more than 1 points!  1787 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f6f0dbccb4ef40a79bf251dbd2071431.jpg {'cuff_left_out': 5, 'top_hem_left': 4}
+more than 1 points!  1794 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f753593f4a98c86f9bd3a55f6c45cfaa.jpg {'cuff_left_in': 2, 'cuff_right_in': 7, 'cuff_right_out': 3}
+more than 1 points!  1795 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/f759dbd7645ab472249e29d4d70081c1.jpg {'cuff_right_in': 5}
+more than 1 points!  1799 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6819576e2177061d3a0bc80d53e514ec.jpg {'cuff_left_in': 9, 'cuff_left_out': 8}
+more than 1 points!  1805 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/68d67f2b5955ae74d922d2ff2ea9f99a.jpg {'cuff_right_in': 4}
+more than 1 points!  1810 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/698cc5945490c13d8165f0d70113b3ef.jpg {'cuff_right_out': 3}
+more than 1 points!  1814 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/5d85aab928a77c39b2b738a0ae2ed85e.jpg {'top_hem_left': 3}
+more than 1 points!  1822 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6dd6a18685a06a2490be66ec826fc560.jpg {'shoulder_right': 5}
+more than 1 points!  1826 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/1ecd3410644b1c3e07129cd3579bc99b.jpg {'cuff_right_out': 4}
+more than 1 points!  1827 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/1ee4cd6189b23d295ea61205c48a0444.jpg {'cuff_left_in': 6, 'cuff_right_in': 3, 'cuff_right_out': 3, 'top_hem_right': 4}
+more than 1 points!  1829 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/1f15fa4c9a7557c42168845662e8a89e.jpg {'cuff_left_out': 6, 'cuff_right_in': 4, 'cuff_right_out': 2}
+more than 1 points!  1835 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/1f9a6fbf767b4f57c3d0e46aa1abd60a.jpg {'cuff_left_in': 6, 'cuff_left_out': 8, 'cuff_right_in': 3}
+more than 1 points!  1837 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/1fd996f922784cf81c60671b7329b6ef.jpg {'armpit_right': 2, 'cuff_left_in': 5, 'cuff_left_out': 6, 'cuff_right_in': 4, 'cuff_right_out': 12}
+more than 1 points!  1845 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/8e5143ace0f43097ed06e4f741c07d9f.jpg {'top_hem_left': 3, 'top_hem_right': 3}
+more than 1 points!  1849 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/8ec845fd3e529913e03374bc1a072c15.jpg {'shoulder_left': 12, 'shoulder_right': 6}
+more than 1 points!  1854 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9d49097e5261e493c47f2ee2c7c204e1.jpg {'cuff_left_in': 4, 'cuff_left_out': 10, 'cuff_right_in': 2, 'cuff_right_out': 2}
+more than 1 points!  1856 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9d6452d89b8261a2d71e605f65169993.jpg {'shoulder_left': 3, 'shoulder_right': 5}
+more than 1 points!  1859 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9d79324176c7b9c1383a388f00cc3b8d.jpg {'top_hem_right': 3}
+more than 1 points!  1862 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/9dbd989a12c7471126572d76fdef3ac7.jpg {'cuff_left_in': 3}
+more than 1 points!  1868 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/23a263edd6cd07a2621b447f95ccad4d.jpg {'top_hem_right': 3}
+more than 1 points!  1869 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/23e1b2565bd6aa63ecd854c58dcc63f5.jpg {'cuff_left_in': 12, 'cuff_left_out': 4}
+more than 1 points!  1870 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/24583e6521c38250e31f2d94dedb5d6a.jpg {'cuff_left_in': 2, 'cuff_left_out': 5, 'cuff_right_in': 4, 'cuff_right_out': 3}
+more than 1 points!  1876 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/24908dc4659d66bfa90f82bd2406058b.jpg {'top_hem_right': 19}
+more than 1 points!  1880 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/24ee9eb3cda96c0d7f7b4096c2b9922a.jpg {'cuff_left_out': 3}
+more than 1 points!  1882 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/4b54b0fa64a963de42bb53ded57cdfb5.jpg {'neckline_left': 4, 'shoulder_left': 3, 'shoulder_right': 9}
+more than 1 points!  1883 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/4b67f9444b79b7d5b0e7d7cc408ef3b9.jpg {'top_hem_right': 5}
+more than 1 points!  1889 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/4c50297cc8a0e33494ce497513e06de5.jpg {'cuff_left_in': 3, 'cuff_left_out': 5, 'top_hem_right': 3}
+more than 1 points!  1893 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/4cd44879bc1f6e3f129e4582559be290.jpg {'shoulder_left': 9}
+more than 1 points!  1894 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/4cdc41d77f5a374f25b0a383f7dca6e8.jpg {'cuff_right_in': 4}
+more than 1 points!  1911 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6fa4ec47ecbcb994c38822a1b74a1634.jpg {'cuff_left_in': 2, 'cuff_right_in': 3}
+more than 1 points!  1914 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/6ff0e244214ddae69752ffe4eb7eb69b.jpg {'shoulder_left': 3, 'top_hem_right': 4}
+more than 1 points!  1920 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/706575485620a85c3045c31be58c7dfe.jpg {'shoulder_left': 2, 'shoulder_right': 3}
+more than 1 points!  1924 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/27b11b1de2807e3e6271c2c9f700d3c9.jpg {'cuff_left_in': 3}
+more than 1 points!  1926 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/27cb428b74427359edbf44cdaf8af397.jpg {'neckline_left': 2, 'neckline_right': 5, 'center_front': 3, 'shoulder_left': 6, 'shoulder_right': 9, 'cuff_left_out': 2, 'cuff_right_in': 11, 'cuff_right_out': 6}
+more than 1 points!  1941 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/5f6ea4caf08bb19c779aac46ac231ea6.jpg {'center_front': 2, 'cuff_right_out': 5}
+more than 1 points!  1947 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/603726c318fef08223f82b1e0c676918.jpg {'shoulder_right': 9, 'cuff_left_in': 3, 'cuff_left_out': 4}
+more than 1 points!  1950 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/446d2d5e32d5a4452669282e8af3836d.jpg {'cuff_right_in': 4, 'cuff_right_out': 4}
+more than 1 points!  1954 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/44b961eac97036e5324a81d9c0db12ad.jpg {'cuff_left_in': 6, 'cuff_left_out': 10}
+more than 1 points!  1956 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/44c374e54f26f02c93e8864a8fc1b0ef.jpg {'cuff_left_in': 6, 'cuff_left_out': 12, 'cuff_right_in': 3, 'cuff_right_out': 2}
+more than 1 points!  1958 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/44e04e4fc007052f33d09d240998da04.jpg {'cuff_left_in': 4, 'cuff_left_out': 9}
+more than 1 points!  1960 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/451019fea5df49be3553d8dd236d9a51.jpg {'cuff_right_in': 7, 'cuff_right_out': 11}
+more than 1 points!  1967 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/fea22deaa57a381622332bf028e0d42c.jpg {'shoulder_right': 7}
+more than 1 points!  1968 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/fec301ed0dd956222ca5f2cc63f1a84d.jpg {'shoulder_right': 3}
+more than 1 points!  1974 /media/yanpan/7D4CF1590195F939/Projects/fashionai/test/Images/blouse/ff65f51634149986c4f67eca25159bc4.jpg {'cuff_right_out': 6}

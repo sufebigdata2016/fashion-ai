@@ -1,0 +1,29 @@
+"""
+neckline_left   1   193, 69, 2,
+neckline_right  2   219, 67, 2,
+center_front    3   206, 71, 2,
+shoulder_left   4   173, 83, 2,
+shoulder_right  5   242, 76, 2,
+armpit_left     6   178, 116, 1,
+armpit_right    7   239, 105, 2,
+waistline_left  8   0, 0, 0,
+waistline_right 9   0, 0, 0,
+cuff_left_in    10  177, 124, 2,
+cuff_left_out   11  160, 126, 2,
+cuff_right_in   12  239, 132, 2,
+cuff_right_out  13  254, 126, 2,
+hemline_left    14  167, 223, 2,
+hemline_right   15  262, 213, 2
+
+"""
+"""
+
+import matplotlib.pyplot as plt
+for i in range(32):
+    plt.imshow(vectormap[:,:,i])
+    plt.savefig("kkk%s.png"%i)
+    plt.close()
+
+dress: (1,2) (4,5) (6,7) (8,9) (10,12) (11, 13) (14,15)
+
+"""
